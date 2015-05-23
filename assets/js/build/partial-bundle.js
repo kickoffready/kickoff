@@ -1,0 +1,1 @@
+webpackJsonp([1],[function(n,p,o){var a=o(1);a("body").append("<h1>Common</h1>")}]);
