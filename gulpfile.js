@@ -9,12 +9,11 @@ gulp.task('compass', function() {
       project: path.join(__dirname, 'assets'),
       css: 'css',
       sass: 'scss'
-    }))
-    .pipe(gulp.dest('app/assets/temp'));
+    }));
 });
 
 gulp.task('watch', function() {
-  gulp.watch('assets/scss/*.scss', ['compass']);
+  gulp.watch('assets/scss/**/*.scss', ['compass']);
 });
 
 gulp.task('min-css', function(){
