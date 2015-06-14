@@ -3,8 +3,3 @@ body {
 	@include background-image(linear-gradient(white, #cccccc, #aaaaaa)); 
 	min-height: 400px; 
 } 
-body {
-	&:before {
-		content: "gulp compass with concat, info : run gulp min-css for build/main.css";
-	}
-}
