@@ -68,7 +68,7 @@ body {
   background-image: -moz-linear-gradient(#ffffff, #cccccc, #aaaaaa);
   background-image: -webkit-linear-gradient(#ffffff, #cccccc, #aaaaaa);
   background-image: linear-gradient(#ffffff, #cccccc, #aaaaaa);
-  min-height: 400px;
+  min-height: 25rem;
 }
 
 body:before {
