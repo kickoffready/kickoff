@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/seeliang/kickoff/issues"
   },
-  "homepage": "https://github.com/seeliang/kickoff"
+  "homepage": "https://github.com/seeliang/kickoff",
+  "dependencies": {
+    "bower": "^1.4.1"
+  }
 }
