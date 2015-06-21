@@ -1,0 +1,5 @@
+body {
+	background: #abc; 
+	@include background-image(linear-gradient(white, #cccccc, #aaaaaa)); 
+	min-height: rem-calc(400px); 
+} 
