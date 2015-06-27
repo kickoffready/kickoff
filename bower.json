@@ -19,6 +19,6 @@
     "tests"
   ],
   "dependencies": {
-    "foundation": "~5.5.2"
+    "foundation": "https://rawgit.com/zurb/foundation/master/scss/foundation/_functions.scss"
   }
 }
