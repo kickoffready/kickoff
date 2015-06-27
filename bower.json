@@ -19,6 +19,6 @@
     "tests"
   ],
   "dependencies": {
-    "foundation": "https://rawgit.com/zurb/foundation/master/scss/foundation/_functions.scss"
+    "rem2px": "https://rawgit.com/zurb/foundation/master/scss/foundation/_functions.scss"
   }
 }
