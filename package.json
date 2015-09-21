@@ -1,6 +1,5 @@
 {
   "name": "kickoff",
-
   "version": "0.0.3",
   "description": "inital web project",
   "main": "doesnothaveindex.js",
@@ -21,7 +20,7 @@
     "node-libs-browser": "^0.5.2",
     "webpack": "^1.9.8",
     "jquery": "^1.11.3"
-  },  
+  },
   "bugs": {
     "url": "https://github.com/seeliang/kickoff/issues"
   },
