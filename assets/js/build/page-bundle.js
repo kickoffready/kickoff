@@ -1,1 +1,0 @@
-webpackJsonp([0],[function(a,n,p){var e=p(1);e("body").append("<h2>Page</h2>")}]);

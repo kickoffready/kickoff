@@ -5,7 +5,8 @@
   "main": "doesnothaveindex.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/.bin/webpack-dev-server --content-base"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,10 @@
   "author": "sihui",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^1.11.3",
     "node-libs-browser": "^0.5.2",
     "webpack": "^1.9.8",
-    "jquery": "^1.11.3"
+    "webpack-dev-server": "^1.11.0"
   },
   "bugs": {
     "url": "https://github.com/seeliang/kickoff/issues"

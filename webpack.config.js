@@ -1,12 +1,13 @@
-var webpack = require("webpack");
+var webpack = require("webpack"),
+    CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 module.exports = {
   entry: {
-  	partial: './assets/js/src/partial.js',
-  	page: 	'./assets/js/src/page.js',
+  	page1: 	'./assets/js/src/page1.js',
+    page2: 	'./assets/js/src/page2.js',
   },
   output: {
   	path: './assets/js/build',
-    filename: '[name]-bundle.js'       
+    filename: '[name]-bundle.js'
   },
   resolve: {
     modulesDirectories: [
@@ -17,7 +18,7 @@ module.exports = {
     }
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('shared', 'common-bundle.js', null, 2),
-    new webpack.optimize.UglifyJsPlugin({ output: {comments: false}})
+    new webpack.optimize.CommonsChunkPlugin('common-bundle.js'),
+    //new webpack.optimize.UglifyJsPlugin({ output: {comments: false}})
   ]
 };
