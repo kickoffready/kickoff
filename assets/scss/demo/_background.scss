@@ -1,5 +1,9 @@
 body {
-	background: #abc; 
-	@include background-image(linear-gradient(white, #cccccc, #aaaaaa)); 
-	min-height: 400px; 
-} 
+  $color-a: #abc;
+  $color-b: #ccc;
+  $color-c: #aaa;
+  $c-white: #fff;
+  @include background-image(linear-gradient($c-white, $color-b, $color-c));
+  background: $color-a;
+  min-height: 400px;
+}
