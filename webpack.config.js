@@ -1,24 +1,22 @@
-var webpack = require("webpack"),
-    CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+
+/*eslint-disable */
+var webpack = require('webpack'),
+  CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 module.exports = {
   entry: {
-  	page1: 	'./assets/js/src/page1.js',
-    page2: 	'./assets/js/src/page2.js',
+  	page: 	'./assets/js/src/page.js',
   },
   output: {
-  	path: './assets/js/build',
+    path: ('./build/js'),
+    publicPath:'build/js',
     filename: '[name]-bundle.js'
   },
   resolve: {
     modulesDirectories: [
-      'node_modules',
-    ],
-    alias: {
-      '$': 'jquery'
-    }
+      'node_modules'
+    ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('common-bundle.js'),
-    //new webpack.optimize.UglifyJsPlugin({ output: {comments: false}})
+    new webpack.optimize.UglifyJsPlugin({ output: {comments: false}})
   ]
 };
