@@ -1,10 +1,14 @@
 body {
-	background: #abc; 
-	@include background-image(linear-gradient(white, #cccccc, #aaaaaa)); 
-	min-height: rem-calc(400px); 
-} 
+  $color-a: #abc;
+  $color-b: #ccc;
+  $color-c: #aaa;
+  $c-white: #fff;
+  @include background-image(linear-gradient($c-white, $color-b, $color-c));
+  min-height: rem-calc(400px);
+}
+
 body {
-	&:before {
-		content: "gulp compass with concat, info : run gulp min-css for build/main.css";
-	}
+  &:before {
+    content: 'gulp compass with concat, info : run gulp min-css for build/main.css';
+  }
 }

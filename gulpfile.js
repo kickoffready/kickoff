@@ -1,10 +1,10 @@
-var fs = require('fs'), 
+var fs = require('fs'),
     path = require('path'),
     scssPath = 'assets/scss',
-    
     gulp = require('gulp'),
     compass = require('gulp-compass'),
   	minifyCss = require('gulp-minify-css'),
+    rename = require('gulp-rename'),
     concat = require('gulp-concat');
 
 function getFolders(dir) {
@@ -24,12 +24,12 @@ gulp.task('concatScss', function() {
    });
 
 });
- 
+
 gulp.task('compass', ['concatScss'],function() {
   gulp.src('./src/*.scss')
     .pipe(compass({
       project: path.join(__dirname, 'assets'),
-      css: 'css',
+      css: path.join(__dirname, 'build/css'),
       sass: 'scss'
     }));
 });
@@ -39,9 +39,12 @@ gulp.task('watch', function() {
 });
 
 gulp.task('min-css', function(){
-  return gulp.src('assets/css/main.css')
+  return gulp.src('build/css/main.css')
     .pipe(minifyCss({compatibility: 'ie8'}))
-    .pipe(gulp.dest('assets/css/build'));	
-}); 
+    .pipe(rename({
+            suffix: '-min'
+        }))
+    .pipe(gulp.dest('build/css'));
+});
 
 gulp.task('default', ['compass', 'watch']);
