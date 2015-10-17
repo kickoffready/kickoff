@@ -4,7 +4,7 @@ var webpack = require('webpack'),
   CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 module.exports = {
   entry: {
-  	page: 	'./assets/js/src/page.js',
+  	app: 	'./assets/js/src/app.js',
   },
   output: {
     path: ('./build/js'),
@@ -16,7 +16,13 @@ module.exports = {
       'node_modules'
     ]
   },
+  module: {
+   loaders: [{
+     test: /\.jsx?$/, // A regexp to test the require path. accepts either js or jsx
+     loader: 'babel' // The module to load. "babel" is short for "babel-loader"
+   }]
+ },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({ output: {comments: false}})
+    //new webpack.optimize.UglifyJsPlugin({ output: {comments: false}})
   ]
 };
