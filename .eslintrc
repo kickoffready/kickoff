@@ -1,25 +1,32 @@
 {
-	"rules": {
-		"indent": [
-			2,
-			2
-		],
-		"quotes": [
-			2,
-			"single"
-		],
-		"linebreakstyle": [
-			2,
-			"unix"
-		],
-		"no-trailing-spaces": 2,
-		"semi": [
-			2,
-			"always"
-		]
-	},
-	"env": {
-		"browser": true
-	},
-	"extends": "eslint:recommended"
+  "rules": {
+    "indent": [
+      2,
+      2
+    ],
+    "quotes": [
+      2,
+      "single"
+    ],
+    "linebreak-style": [
+      2,
+      "unix"
+    ],
+    "no-trailing-spaces": 2,
+    "semi": [
+      2,
+      "always"
+    ],
+  },
+
+  "ecmaFeatures":{
+    "jsx":true,
+    "modules":true
+  },
+
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
 }
