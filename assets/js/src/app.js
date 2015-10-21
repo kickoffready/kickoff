@@ -4,8 +4,8 @@ var Demo = React.createClass({
   render: function(){
     return (
       <section className={'react-demo'}>
-        <h1> {'here is my react demo'}</h1>
-        <h2> {'something new'}</h2>
+        <h1>{'here is my react demo'}</h1>
+        <h2>{'something new'}</h2>
       </section>
     );
   }
