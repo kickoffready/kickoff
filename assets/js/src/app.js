@@ -1,6 +1,7 @@
 import React from 'react';
-const Demo = React.createClass({
-  displayName: 'Demo',
+import {render} from 'react-dom';
+class Demo extends React.Component{
+  displayName: 'Demo';
   render(){
     return (
       <section className={'react-demo'}>
@@ -9,9 +10,6 @@ const Demo = React.createClass({
       </section>
     );
   }
-});
+}
 
-React.render(
-  <Demo/>,
-  document.getElementById('app')
-);
+render(<Demo/>, document.getElementById('app'));
