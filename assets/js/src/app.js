@@ -1,15 +1,24 @@
 import React from 'react';
 import {render} from 'react-dom';
-class Demo extends React.Component{
-  displayName: 'Demo';
+import RangeSelector from './range-selector.js';
+class RangeSelectorGroup extends React.Component{
+  displayName: 'RangeSelectorGroup';
+  propTypes: {
+    option: React.PropTypes.array.isRequired
+  }
   render(){
     return (
-      <section className={'react-demo'}>
-        <h1>here is my react demo</h1>
-        <h2>something new</h2>
-      </section>
+      <div className={'range-selector'}>
+        <RangeSelector name={'Seats'}// should be a loop
+            range={[2,7]}
+        />
+        <RangeSelector name={'Doors'}
+            range={[2,5]}
+        />
+      </div>
     );
   }
 }
 
-render(<Demo/>, document.getElementById('app'));
+render(
+  <RangeSelectorGroup/>, document.getElementById('app'));
