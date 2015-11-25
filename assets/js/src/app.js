@@ -14,6 +14,7 @@ class RangeSelectorGroup extends React.Component{
         />
         <RangeSelector name={'Doors'}
             range={[2,5]}
+            initalSelected={[2,4]}
         />
       </div>
     );

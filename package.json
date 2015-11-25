@@ -10,7 +10,6 @@
     "eslint": "^1.7.1",
     "eslint-plugin-react": "^3.5.1",
     "node-libs-browser": "^0.5.2",
-    "react-hot-loader": "^1.3.0",
     "webpack": "^1.9.8",
     "webpack-dev-server": "^1.11.0"
   },
@@ -29,6 +28,7 @@
   "author": "sihui",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^3.10.1",
     "react": "^0.14.2",
     "react-dom": "^0.14.2"
   },

@@ -3,18 +3,11 @@ class InputCheckbox extends React.Component{
   displayName: 'InputCheckbox';
   constructor(props) {
     super(props);
-    this.state = {isChecked: false};
-
     this.onChange = this.onChange.bind(this);
   }
 
   onChange() {
-    this.setState({isChecked: !this.state.isChecked},() => {
-      if (this.state.isChecked) {
-        this.props.inputChecked(this.props.value);
-      }
-    });
-
+    this.props.inputChecked(this.props.value);
   }
 
   render(){
@@ -25,10 +18,10 @@ class InputCheckbox extends React.Component{
     return (
       <div className={mainClass}>
         <input
+            checked={this.props.isSelected}
             className={inputClass}
-            checked={this.state.isChecked}
-            onChange={this.onChange}
             id={linked}
+            onChange={this.onChange}
             type={'checkbox'}
             value={linked}
         />
