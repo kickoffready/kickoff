@@ -18,7 +18,7 @@ class RangeSelector extends React.Component{
     this.updateSelected = this.updateSelected.bind(this);
   }
 
-  updateSelected(number){
+  updateSelected(number) {
     let newlySelected = this.state.selected.slice();
     if (newlySelected.length === 1 && newlySelected[0] === number) {
       newlySelected = [];
@@ -36,7 +36,7 @@ class RangeSelector extends React.Component{
     });
   }
 
-  isInSelected(number){
+  isInSelected(number) {
     let start = this.state.selected[0],
       end = this.state.selected[1];
     if(!end) {
@@ -51,10 +51,26 @@ class RangeSelector extends React.Component{
     return false;
   }
 
+  stateClasslist(number) {
+    const inRangeClass = 'is-in-range';
+    if (this.isInSelected(number)){
+      if(!this.state.selected[1]) {
+        return 'is-start';
+      } else if  (number === this.state.selected[0]) {
+        return 'is-start' + ' ' + inRangeClass;
+      } else if (number === this.state.selected[1]) {
+        return 'is-end' + ' ' + inRangeClass;
+      }
+      return inRangeClass;
+    }
+    return '';
+  }
+
   render(){
     let inputList=[],
       selected,
       checkboxName,
+      stateClassSet,
       i ,
       rangelist=[],
       rangeStart = this.props.range[0],
@@ -68,12 +84,14 @@ class RangeSelector extends React.Component{
       (number,i) => {
         checkboxName = this.props.name + '-' + number;
         selected = this.isInSelected(number);
+        stateClassSet = this.stateClasslist(number);
         return (
           <Checkbox
-              inputChecked={this.updateSelected.bind(this)}
+              inputChecked={this.updateSelected}
               isSelected={selected}
               key={i}
               linked={checkboxName}
+              stateClass={stateClassSet}
               value={number}
           />
         );

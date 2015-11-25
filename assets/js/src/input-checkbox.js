@@ -14,9 +14,10 @@ class InputCheckbox extends React.Component{
     let mainClass = 'range-selector__item-input',
       inputClass = mainClass + '-checkbox',
       labelClass = mainClass + '-text',
-      linked = this.props.linked;
+      linked = this.props.linked,
+      activeClass = mainClass + ' ' + this.props.stateClass;
     return (
-      <div className={mainClass}>
+      <div className={activeClass}>
         <input
             checked={this.props.isSelected}
             className={inputClass}
