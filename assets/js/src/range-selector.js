@@ -5,42 +5,38 @@ class RangeSelector extends React.Component{
   displayName: 'RangeSelector';
   propTypes: {
     name: React.PropTypes.string.isRequired,
-    range: React.PropTypes.array.isRequired
+    range: React.PropTypes.array.isRequired,
+    initalSelected: React.PropTypes.array
   }
+
   constructor(props) {
     super(props);
     this.state = {
-      selected: props.initalSelected ? props.initalSelected : [],
+      selected: props.initalSelected ? props.initalSelected : []
     };
 
     this.updateSelected = this.updateSelected.bind(this);
   }
 
-  componentWillUpdate() {
-    console.log(this.state);
-  }
-
-  shouldComponentUpdat(nextProps) {
-    return this.props.value !== nextProps.value;
-  }
-
   updateSelected(number){
     let newlySelected = this.state.selected.slice();
-    if (newlySelected.length === 1) {
-      // need to solve [2,2] should be []
-    }
-    if (newlySelected.length === 2) {
+    if (newlySelected.length === 1 && newlySelected[0] === number) {
       newlySelected = [];
+    } else if (newlySelected.length === 2) {
+      newlySelected = [];
+      newlySelected.push(number);
+      newlySelected = _.sortBy(_.takeRight(newlySelected, 2));
+    } else {
+      newlySelected.push(number);
+      newlySelected = _.sortBy(_.takeRight(newlySelected, 2));
     }
-    newlySelected.push(number);
-    newlySelected = _.sortBy(_.takeRight(newlySelected, 2));
+
     this.setState({
       selected: newlySelected
     });
   }
 
   isInSelected(number){
-    console.log(this.state.selected);
     let start = this.state.selected[0],
       end = this.state.selected[1];
     if(!end) {
@@ -67,8 +63,6 @@ class RangeSelector extends React.Component{
     for (i = rangeStart; i <= rangeEnd; i++ ) {
       rangelist.push(i);
     }
-
-    console.log(this.props.name);
 
     inputList = rangelist.map(
       (number,i) => {
