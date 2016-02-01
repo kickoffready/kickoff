@@ -1,2 +1,4 @@
-@import 'base';
-@import 'demo';
+@import '../vendor/reset.css';
+@import 'base/*';
+@import 'demo/*';
+@import 'testing/*';

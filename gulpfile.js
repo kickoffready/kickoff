@@ -1,41 +1,65 @@
-var fs = require('fs'),
-    path = require('path'),
-    scssPath = 'assets/scss',
-    gulp = require('gulp'),
-    compass = require('gulp-compass'),
-  	minifyCss = require('gulp-minify-css'),
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    importCss = require('gulp-import-css'),
+    minifyCss = require('gulp-minify-css'),
+    autoprefixer = require('gulp-autoprefixer'),
+    clean = require('gulp-clean'),
     rename = require('gulp-rename'),
-    concat = require('gulp-concat');
+    bulkSass = require('gulp-sass-bulk-import');
 
-function getFolders(dir) {
-    return fs.readdirSync(dir)
-      .filter(function(file) {
-        return fs.statSync(path.join(dir, file)).isDirectory();
-      });
-}
-
-gulp.task('concatScss', function() {
-   var folders = getFolders(scssPath);
-
-   var tasks = folders.map(function(folder) {
-      return gulp.src(path.join(scssPath, folder, '/*.scss'))
-        .pipe(concat('_'+folder + '.scss'))
-        .pipe(gulp.dest(scssPath))
-   });
-
+// make layout loads after structure
+gulp.task('rn-layout',function(){
+  return gulp.src('assets/scss/**/*layout.scss')
+    .pipe(rename(function(opt){
+      opt.basename = opt.basename.replace('-layout', '-xyz');
+      return opt;
+    }))
+    .pipe(gulp.dest('assets/scss'));
 });
 
-gulp.task('compass', ['concatScss'],function() {
-  gulp.src('./src/*.scss')
-    .pipe(compass({
-      project: path.join(__dirname, 'assets'),
-      css: path.join(__dirname, 'build/css'),
-      sass: 'scss'
-    }));
+gulp.task('rm-layout',function(){
+  gulp.src('assets/scss/**/*layout.scss')
+  .pipe(clean());
 });
+
+gulp.task('rn-xyz',function(){
+  return gulp.src('assets/scss/**/*xyz.scss')
+    .pipe(rename(function(opt){
+      opt.basename = opt.basename.replace('-xyz', '-layout');
+      return opt;
+    }))
+    .pipe(gulp.dest('assets/scss'));
+});
+
+gulp.task('rm-xyz',function(){
+  gulp.src('assets/scss/**/*xyz.scss')
+  .pipe(clean());
+});
+
+
+gulp.task('css-init',['rn-layout','rm-layout']);
+gulp.task('css-reset',['rn-xyz','rm-xyz']);
+/// end of layout scss fix
+
+gulp.task('css', function() {
+    return gulp
+            .src('assets/scss/main.scss')
+            .pipe(bulkSass())
+            .pipe(
+                sass({
+                    includePaths: ['assets/scss']
+                }))
+            .pipe(autoprefixer({
+              "autoprefixer": {"browsers": ["> 2%"]}
+              }))
+            .pipe(importCss())
+            .pipe( gulp.dest('./build/css/') );
+});
+
+gulp.task('compile',['css-init','css','css-reset']);
 
 gulp.task('watch', function() {
-  gulp.watch(['assets/scss/**/*.scss','!assets/scss/*.scss'], ['compass']); // do not include top level
+  gulp.watch(['assets/scss/**/*.scss'],['compile']);
 });
 
 gulp.task('min-css', function(){
@@ -47,4 +71,4 @@ gulp.task('min-css', function(){
     .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('default', ['compass', 'watch']);
+gulp.task('default', ['watch']);
