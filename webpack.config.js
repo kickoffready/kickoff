@@ -11,6 +11,17 @@ module.exports = {
     publicPath:'build/js',
     filename: '[name]-bundle.js'
   },
+  module: {
+    loaders: [
+      {
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015']
+        }
+      }
+    ]
+  },
   resolve: {
     modulesDirectories: [
       'node_modules'
