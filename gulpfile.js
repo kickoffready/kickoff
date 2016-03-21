@@ -34,4 +34,4 @@ gulp.task('min-css', function(){
     .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['css','watch']);
