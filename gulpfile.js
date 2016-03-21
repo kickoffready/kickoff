@@ -6,6 +6,12 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     bulkSass = require('gulp-sass-bulk-import');
 
+function resumeError (error) {
+  // http://stackoverflow.com/a/23973536
+  console.log(error.toString());
+  this.emit('end');
+}
+
 gulp.task('css', function() {
     return gulp
             .src('assets/scss/main.scss')
@@ -14,6 +20,7 @@ gulp.task('css', function() {
                 sass({
                     includePaths: ['assets/scss']
                 }))
+                .on('error', resumeError)
             .pipe(autoprefixer({
               "autoprefixer": {"browsers": ["> 2%"]}
               }))
