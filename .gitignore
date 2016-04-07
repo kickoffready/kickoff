@@ -4,3 +4,4 @@ bower_components
 
 *.scssc
 *-cache*
+*.log
