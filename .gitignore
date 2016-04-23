@@ -3,3 +3,6 @@ bower_components
 .project
 
 *.scssc
+
+.eslintrc
+.scss-lint.yml
