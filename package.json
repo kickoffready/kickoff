@@ -4,11 +4,12 @@
   "description": "inital web project",
   "main": "doesnothaveindex.js",
   "devDependencies": {
+    "gulp-eslint": "^2.0.0",
     "sl-fe-lint": "^1.1.1",
     "sl-gt-synclint": "^1.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "gulp eslint",
     "synclint": "gulp synclint --path sl-fe-lint"
   },
   "repository": {
