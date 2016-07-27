@@ -5,3 +5,7 @@ bower_components
 *.scssc
 
 *.log
+
+server.bundle.js
+
+public/bundle.js
