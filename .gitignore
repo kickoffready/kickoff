@@ -6,6 +6,8 @@ bower_components
 
 *.log
 
-server.bundle.js
-
 public/bundle.js
+
+*.swp
+
+server.bundle.js
