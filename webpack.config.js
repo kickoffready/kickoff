@@ -1,11 +1,10 @@
 
 /*eslint-disable */
 var webpack = require('webpack'),
+  glob_entries = require('webpack-glob-entries'),
   CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 module.exports = {
-  entry: {
-  	page: 	'./assets/js/src/page.js',
-  },
+  entry: glob_entries('./assets/js/src/pages/**/*.js'),
   output: {
     path: ('./build/js'),
     publicPath:'build/js',
@@ -28,6 +27,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({ output: {comments: false}})
+    new webpack.optimize.UglifyJsPlugin({ output: {comments: false}}),
+    new webpack.optimize.CommonsChunkPlugin("common.js")
   ]
 };
