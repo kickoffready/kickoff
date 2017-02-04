@@ -4,7 +4,7 @@
   "description": "inital web project",
   "main": "doesnothaveindex.js",
   "devDependencies": {
-    "gulp-eslint": "^2.0.0",
+    "gulp-eslint": "^3.0.1",
     "sl-fe-lint": "^1.1.1",
     "sl-gt-synclint": "^1.0.0"
   },
