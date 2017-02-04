@@ -45,6 +45,7 @@
     "react/sort-comp": 1,
     "react/wrap-multilines": 1
   },
+
   "ecmaFeatures":{
     "jsx":true,
     "modules":true
@@ -56,6 +57,7 @@
     "browser": true,
     "node": true
   },
+  "extends": "eslint:recommended",
 
   "extends": "eslint:recommended",
 
