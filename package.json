@@ -29,8 +29,8 @@
   "author": "sihui",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2"
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   },
   "bugs": {
     "url": "https://github.com/seeliang/kickoff/issues"
