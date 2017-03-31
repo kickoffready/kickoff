@@ -18,7 +18,6 @@
   "author": "sihui",
   "license": "ISC",
   "dependencies": {
-    "node-libs-browser": "^0.5.2",
     "webpack": "^1.9.8",
     "webpack-dev-server": "^1.11.0"
   },
