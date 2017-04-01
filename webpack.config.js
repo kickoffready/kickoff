@@ -1,8 +1,10 @@
 const webpack = require('webpack'),
   path =  require('path'),
-  CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
+  //CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 
 module.exports = {
+  devtool: 'eval',
+
   entry: {
     app: './assets/js/src/app.js',
     main: './assets/js/src/main.js',
@@ -26,7 +28,7 @@ module.exports = {
     publicPath:'build/js',
     filename: '[name]-bundle.js'
   },
-
+/* TODO: build config.js
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
       output: {
@@ -34,7 +36,7 @@ module.exports = {
       }
     })
   ],
-
+*/
   resolve: {
     modules: [
       'node_modules'
