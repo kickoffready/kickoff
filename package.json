@@ -3,7 +3,10 @@
   "version": "0.0.3",
   "description": "inital web project",
   "main": "doesnothaveindex.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node node_modules/.bin/webpack-dev-server --content-base"
@@ -17,10 +20,7 @@
   ],
   "author": "sihui",
   "license": "ISC",
-  "dependencies": {
-    "webpack": "^2.3.2",
-    "webpack-dev-server": "^2.4.2"
-  },
+  "dependencies": {},
   "bugs": {
     "url": "https://github.com/seeliang/kickoff/issues"
   },
