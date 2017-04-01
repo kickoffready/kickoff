@@ -1,28 +1,36 @@
-
-/*eslint-disable */
-var webpack = require('webpack'),
+const webpack = require('webpack'),
+  path =  require('path'),
   CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
+
 module.exports = {
   entry: {
-  	app: 	'./assets/js/src/app.js',
+    app:  './assets/js/src/app.js',
   },
+
+  module: {
+  rules: [{
+    test: /\.jsx?$/, // A regexp to test the require path. accepts either js or jsx
+    loader: 'babel-loader'
+    }],
+  },
+
   output: {
-    path: ('./build/js'),
+    path: (path.join(__dirname,'/build/js')),
     publicPath:'build/js',
-    filename: '[name]-bundle.js'
+    filename: 'main.js'
   },
+
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      output: {
+        comments: false
+      }
+    })
+  ],
+
   resolve: {
-    modulesDirectories: [
+    modules: [
       'node_modules'
     ]
-  },
-  module: {
-   loaders: [{
-     test: /\.jsx?$/, // A regexp to test the require path. accepts either js or jsx
-     loader: 'babel' // The module to load. "babel" is short for "babel-loader"
-   }]
- },
-  plugins: [
-    //new webpack.optimize.UglifyJsPlugin({ output: {comments: false}})
-  ]
+  }
 };

@@ -12,4 +12,4 @@ class Demo extends React.Component{
   }
 }
 
-render(<Demo/>, document.getElementById('app'));
+render(<Demo/>, document.getElementById('body'));
