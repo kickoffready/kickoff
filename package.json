@@ -18,8 +18,8 @@
   "author": "sihui",
   "license": "ISC",
   "dependencies": {
-    "webpack": "^1.9.8",
-    "webpack-dev-server": "^1.11.0"
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
   },
   "bugs": {
     "url": "https://github.com/seeliang/kickoff/issues"
