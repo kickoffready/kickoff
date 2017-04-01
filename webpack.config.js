@@ -9,10 +9,15 @@ module.exports = {
     page: './assets/js/src/page.js'
   },
 
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM'
+  },
+
   module: {
-  rules: [{
-    test: /\.jsx?$/, // A regexp to test the require path. accepts either js or jsx
-    loader: 'babel-loader'
+    rules: [{
+      test: /\.jsx?$/, // A regexp to test the require path. accepts either js or jsx
+      loader: 'babel-loader'
     }],
   },
 
