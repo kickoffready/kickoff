@@ -4,13 +4,15 @@ const webpack = require('webpack'),
 
 module.exports = {
   entry: {
-    app: './assets/js/src/main.js',
+    app: './assets/js/src/app.js',
+    main: './assets/js/src/main.js',
+    page: './assets/js/src/page.js',
   },
 
   output: {
     path: (path.join(__dirname,'/build/js')),
     publicPath:'build/js',
-    filename: 'main.js'
+    filename: '[name]-bundle.js'
   },
 
   plugins: [
