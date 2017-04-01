@@ -9,3 +9,5 @@ bower_components
 *.swp
 
 server.bundle.js
+
+build/
