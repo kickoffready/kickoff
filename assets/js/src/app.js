@@ -1,22 +1,33 @@
 import React from 'react';
-import {createStore} from 'redux';
+import {combineReducers,createStore} from 'redux';
 import {render} from 'react-dom';
 
-const reducer = (state, action) => {
-  if(action.type === 'move') {
-    return state + action.slide;
+const imagesReducer = (state = {}, action) => {
+  switch(action.type) {
+    case 'size': {
+      state = {...state, size: action.content};
+      break;
+    }
+    case 'color': {
+      state = {...state, color: action.content};
+      break;
+    }
   }
+
   return state;
 }
 
-const store = createStore(reducer, 0);
+const reducers = combineReducers({
+  images: imagesReducer
+})
+const store = createStore(reducers);
 
 store.subscribe(() => {
   console.log('new store input', store.getState());
 });
 
-store.dispatch({type:'move', slide: -1})
-store.dispatch({type:'move', slide: 1})
+store.dispatch({type:'size', content: '320x240'})
+store.dispatch({type:'color', content: 'fff'})
 class Demo extends React.Component{
   displayName: 'Demo';
   render(){
