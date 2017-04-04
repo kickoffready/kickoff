@@ -4,12 +4,8 @@ import {render} from 'react-dom';
 
 const imagesReducer = (state = {}, action) => {
   switch(action.type) {
-    case 'size': {
-      state = {...state, size: action.content};
-      break;
-    }
-    case 'color': {
-      state = {...state, color: action.content};
+    case 'add': {
+      state = {...state, image: action.content};
       break;
     }
   }
@@ -26,8 +22,14 @@ store.subscribe(() => {
   console.log('new store input', store.getState());
 });
 
-store.dispatch({type:'size', content: '320x240'})
-store.dispatch({type:'color', content: 'fff'})
+store.dispatch({
+    type:'add',
+    content: {
+      size:'320x240',
+      color:'fff'
+    }
+});
+
 class Demo extends React.Component{
   displayName: 'Demo';
   render(){
