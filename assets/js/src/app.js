@@ -1,6 +1,9 @@
 import React from 'react';
 import {applyMiddleware,combineReducers,createStore} from 'redux';
 import {render} from 'react-dom';
+import thunk from 'redux-thunk';
+import { createLogger } from 'redux-logger';
+import axios from 'axios';
 
 const imagesReducer = (state = {}, action) => {
   switch(action.type) {
@@ -13,8 +16,22 @@ const imagesReducer = (state = {}, action) => {
   return state;
 }
 
+const imagesFetch = (state = {}, action) => {
+  switch(action.type) {
+    case 'RECEIVE': {
+      console.log('RECEIVE')
+      state = {...state,images:action.content};
+    }
+    case 'ERROR': {
+     state = {...state, error:action.content};
+    }
+  }
+  return state;
+}
+
 const reducers = combineReducers({
-  images: imagesReducer
+  imagesReducer: imagesReducer,
+  imagesFetch: imagesFetch
 })
 
 const checkStatus = (store) => (next) => (action) => {
@@ -22,19 +39,21 @@ const checkStatus = (store) => (next) => (action) => {
   next(action);
 }
 
-const middleware = applyMiddleware(checkStatus);
+const middleware = applyMiddleware(thunk, createLogger());
 const store = createStore(reducers, {}, middleware);
 
 store.subscribe(() => {
   console.log('new store input', store.getState());
 });
 
-store.dispatch({
-    type:'add',
-    content: {
-      size:'320x240',
-      color:'fff'
-    }
+store.dispatch((dispatch) => {
+  axios.get('//localhost:8080/api/images.json')
+    .then((response) => {
+      dispatch({type: 'RECEIVE', content: response.data})
+    })
+    .catch((err) => {
+      dispatch({type: 'ERROR', content: err})
+    })
 });
 
 class Demo extends React.Component{
