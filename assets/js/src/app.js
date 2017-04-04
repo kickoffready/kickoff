@@ -1,5 +1,5 @@
 import React from 'react';
-import {combineReducers,createStore} from 'redux';
+import {applyMiddleware,combineReducers,createStore} from 'redux';
 import {render} from 'react-dom';
 
 const imagesReducer = (state = {}, action) => {
@@ -16,7 +16,14 @@ const imagesReducer = (state = {}, action) => {
 const reducers = combineReducers({
   images: imagesReducer
 })
-const store = createStore(reducers);
+
+const checkStatus = (store) => (next) => (action) => {
+  console.log('update', action);
+  next(action);
+}
+
+const middleware = applyMiddleware(checkStatus);
+const store = createStore(reducers, {}, middleware);
 
 store.subscribe(() => {
   console.log('new store input', store.getState());
