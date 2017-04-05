@@ -1,9 +1,9 @@
-import {applyMiddleware,createStore} from 'redux';
+import {createStore} from 'redux';
 import React from 'react';
 import {render} from 'react-dom';
-import axios from 'axios';
 import reducers from './reducers';
 import middleware from './middleware';
+import {addImage,imagesFetch} from './actions';
 
 const store = createStore(reducers, {}, middleware);
 
@@ -11,22 +11,9 @@ store.subscribe(() => {
   console.log('new store input', store.getState());
 });
 
-store.dispatch((dispatch) => {
-  axios.get('//localhost:8080/api/images.json')
-    .then((response) => {
-      dispatch({type: 'RECEIVE', content: response.data})
-    })
-    .catch((err) => {
-      dispatch({type: 'ERROR', content: err})
-    })
-});
+store.dispatch(imagesFetch());
 
-store.dispatch({
-  type:'add', 
-  content: {
-    size: '320'
-  }
-})
+store.dispatch(addImage('320x240'));
 
 class Demo extends React.Component{
   displayName: 'Demo';

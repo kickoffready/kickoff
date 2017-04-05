@@ -2,12 +2,11 @@ import {combineReducers} from 'redux';
 
 const imagesReducer = (state = {}, action) => {
   switch(action.type) {
-    case 'add': {
+    case 'ADD_IMAGE': {
       state = {...state, image: action.content};
       break;
     }
   }
-
   return state;
 }
 
