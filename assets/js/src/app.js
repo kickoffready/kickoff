@@ -21,9 +21,11 @@ const imagesFetch = (state = {}, action) => {
     case 'RECEIVE': {
       console.log('RECEIVE')
       state = {...state,images:action.content};
+      break;
     }
     case 'ERROR': {
      state = {...state, error:action.content};
+     break;
     }
   }
   return state;
