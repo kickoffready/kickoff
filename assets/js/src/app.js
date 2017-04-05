@@ -30,8 +30,8 @@ const imagesFetch = (state = {}, action) => {
 }
 
 const reducers = combineReducers({
-  imagesReducer: imagesReducer,
-  imagesFetch: imagesFetch
+  images: imagesReducer,
+  imagesFeed: imagesFetch
 })
 
 const checkStatus = (store) => (next) => (action) => {
@@ -55,6 +55,13 @@ store.dispatch((dispatch) => {
       dispatch({type: 'ERROR', content: err})
     })
 });
+
+store.dispatch({
+  type:'add', 
+  content: {
+    size: '320'
+  }
+})
 
 class Demo extends React.Component{
   displayName: 'Demo';
