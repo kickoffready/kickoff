@@ -3,15 +3,8 @@ import React from 'react';
 import {render} from 'react-dom';
 import axios from 'axios';
 import reducers from './reducers';
-import thunk from 'redux-thunk';
-import { createLogger } from 'redux-logger';
+import middleware from './middleware';
 
-const checkStatus = (store) => (next) => (action) => {
-  console.log('update', action);
-  next(action);
-}
-
-const middleware = applyMiddleware(thunk, createLogger());
 const store = createStore(reducers, {}, middleware);
 
 store.subscribe(() => {
