@@ -1,40 +1,10 @@
+import {applyMiddleware,createStore} from 'redux';
 import React from 'react';
-import {applyMiddleware,combineReducers,createStore} from 'redux';
 import {render} from 'react-dom';
+import axios from 'axios';
+import reducers from './reducers';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
-import axios from 'axios';
-
-const imagesReducer = (state = {}, action) => {
-  switch(action.type) {
-    case 'add': {
-      state = {...state, image: action.content};
-      break;
-    }
-  }
-
-  return state;
-}
-
-const imagesFetch = (state = {}, action) => {
-  switch(action.type) {
-    case 'RECEIVE': {
-      console.log('RECEIVE')
-      state = {...state,images:action.content};
-      break;
-    }
-    case 'ERROR': {
-     state = {...state, error:action.content};
-     break;
-    }
-  }
-  return state;
-}
-
-const reducers = combineReducers({
-  images: imagesReducer,
-  imagesFeed: imagesFetch
-})
 
 const checkStatus = (store) => (next) => (action) => {
   console.log('update', action);
