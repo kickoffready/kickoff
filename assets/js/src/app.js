@@ -3,8 +3,19 @@ import {render} from 'react-dom';
 import reducers from './reducers';
 import {addImage,imagesFetch} from './actions';
 import store from './store';
+import {Provider} from 'react-redux'
 
 class Demo extends React.Component{
+  render(){
+    return (
+      <Provider store={store}>
+        <Main/>
+      </Provider>
+    );
+  }
+}
+
+class Main extends React.Component{
   constructor(props) {
     super(props);
     this.state = {};
@@ -18,12 +29,13 @@ class Demo extends React.Component{
   displayName: 'Demo';
   render(){
     return (
-      <section className={'react-demo'}>
-        <h1>here is my react redux demo</h1>
-        <button onClick={this.add.bind(this)}>add</button>
-      </section>
+        <section className={'react-demo'}>
+          <h1>here is my react redux demo</h1>
+          <button onClick={this.add.bind(this)}>add</button>
+        </section>
     );
   }
 }
+
 
 render(<Demo/>, document.getElementById('app'));
