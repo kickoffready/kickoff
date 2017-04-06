@@ -1,11 +1,8 @@
-import {createStore} from 'redux';
 import React from 'react';
 import {render} from 'react-dom';
 import reducers from './reducers';
-import middleware from './middleware';
 import {addImage,imagesFetch} from './actions';
-
-const store = createStore(reducers, {}, middleware);
+import store from './store';
 
 store.subscribe(() => {
   console.log('new store input', store.getState());
