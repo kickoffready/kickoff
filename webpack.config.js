@@ -1,6 +1,9 @@
 const webpack = require('webpack'),
   path =  require('path');
-  //CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
+
+/* TODO build config
+  CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
+*/
 
 module.exports = {
   devtool: 'eval',
