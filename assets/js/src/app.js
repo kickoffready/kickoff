@@ -9,8 +9,8 @@ import Main from './views';
 
 function mapStateTOProps(state) {
   return {
-    images: store.images,
-    imagesFetched: store.imagesFetch
+    images: store.getState().images,
+    imagesFeed: store.getState().imagesFeed
   }
 }
 
