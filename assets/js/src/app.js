@@ -1,41 +1,33 @@
 import React from 'react';
 import {render} from 'react-dom';
 import reducers from './reducers';
-import {addImage,imagesFetch} from './actions';
+import * as actions from './actions';
 import store from './store';
-import {Provider} from 'react-redux'
+import {bindActionCreators} from 'redux';
+import {Provider,connect} from 'react-redux';
+import Main from './views';
+
+function mapStateTOProps(state) {
+  return {
+    images: store.images,
+    imagesFetched: store.imagesFetch
+  }
+}
+
+function mapDispachToProps(dispatch) {
+  return bindActionCreators(actions,dispatch);
+}
+
+const ReduxMain = connect(mapStateTOProps,mapDispachToProps)(Main);
 
 class Demo extends React.Component{
   render(){
     return (
       <Provider store={store}>
-        <Main/>
+        <ReduxMain/>
       </Provider>
     );
   }
 }
-
-class Main extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {};
-    this.add = () => {
-      store.dispatch(addImage('450x456'));
-    }
-  }
-  componentWillMount(){
-    store.dispatch(imagesFetch());
-  }
-  displayName: 'Demo';
-  render(){
-    return (
-        <section className={'react-demo'}>
-          <h1>here is my react redux demo</h1>
-          <button onClick={this.add.bind(this)}>add</button>
-        </section>
-    );
-  }
-}
-
 
 render(<Demo/>, document.getElementById('app'));
