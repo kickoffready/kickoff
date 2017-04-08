@@ -1,5 +1,7 @@
 import Cast from './cast';
 import Feedback from './feedback';
+import React from 'react';
+import { BrowserRouter as Router, link, Route} from 'react-router-dom';
 
 class Index extends React.Component{
   displayName: 'Index';
@@ -33,10 +35,14 @@ class Index extends React.Component{
     },this);
 
     return (
-      <div>
-        <h1 className={'h1'}>R3 Star Wars</h1>
-        {castList}
-      </div>
+      <Router>
+        <Route exact={true} path="/" render= {() =>(
+          <div>
+            <h1 className={'h1'}>R3 Star Wars</h1>
+            {castList}
+          </div>
+        )} />
+      </Router>
     )
   }
 }
