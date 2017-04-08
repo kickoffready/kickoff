@@ -18,7 +18,7 @@ const feedFetch = (state = {}, action) => {
       break;
     }
     case 'ERROR': {
-      state = {...state, error:action.content};
+      state = {...state, error:action.content, fetchError: true};
       break;
     }
   }

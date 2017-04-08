@@ -1,0 +1,14 @@
+.feedback {
+  @include clearfix;
+}
+
+.feedback__title {
+  @include small;
+  display: block;
+}
+
+.feedback__button {
+  @include button-1;
+  display: block;
+  margin: 24px auto;
+}

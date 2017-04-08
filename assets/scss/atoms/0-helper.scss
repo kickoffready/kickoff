@@ -1,0 +1,19 @@
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+@mixin hover {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+@mixin inner-border($color: $c-print-0, $width: 2px) {
+  box-shadow: inset 0 0 0 $width $color;
+}

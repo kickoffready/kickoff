@@ -141,6 +141,25 @@ table {
   box-sizing: border-box;
 }
 
+.button-1 {
+  border: 0;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 700;
+  background-color: #ffd700;
+  color: #000;
+}
+
+.button-1:hover,
+.button-1:focus,
+.button-1:active {
+  cursor: pointer;
+}
+
 .h1 {
   font-family: 'Titillium Web', sans-serif;
   font-size: 48px;
@@ -163,8 +182,45 @@ table {
   color: #ffd700;
 }
 
+.feedback::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.feedback__title {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px;
+  line-height: 19.6px;
+  font-weight: 400;
+  color: #ffd700;
+  display: block;
+}
+
+.feedback__button {
+  border: 0;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 700;
+  background-color: #ffd700;
+  color: #000;
+  display: block;
+  margin: 24px auto;
+}
+
+.feedback__button:hover,
+.feedback__button:focus,
+.feedback__button:active {
+  cursor: pointer;
+}
+
 .frame {
   background-color: #000;
   height: 100vh;
+  padding: 48px;
   text-align: center;
 }

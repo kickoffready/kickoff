@@ -1,0 +1,50 @@
+@mixin button-base {
+  @include hover {
+    cursor: pointer;
+  }
+
+  border: 0;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 24px;
+  text-decoration: none;
+
+}
+
+@mixin button-1 {
+  @include button-base;
+  @include font-weight(bold);
+  background-color: $c-main-1;
+  color: $c-print-a;
+}
+
+@mixin button-2 {
+  @include button-base;
+  @include font-weight(bold);
+  background-color: $c-main-1;
+  color: $c-print-0;
+}
+
+@mixin button-3 {
+  @include button-base;
+  @include font-weight(bold);
+  @include inner-border;
+  background-color: $c-main-1;
+  color: $c-print-0;
+}
+
+@mixin buttons {
+  .button-1 {
+    @include button-1;
+  }
+
+  .button-2 {
+    @include button-2;
+  }
+
+  .button-3 {
+    @include button-3;
+  }
+}
