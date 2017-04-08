@@ -30,9 +30,10 @@ class Index extends React.Component{
 
     list = this.props.feed.feed.results;
     castList = list.map((player,i) => {
-      const name = player.name;
+      const name = player.name,
+        link = name.replace(/\s+/g, '-').toLowerCase();
       return (
-        <Link to={`/cast/${name}`}>
+        <Link to={`/cast/${link}`}>
           <Cast name={name}/>
         </Link>
       )
