@@ -31,7 +31,11 @@ class Index extends React.Component{
     list = this.props.feed.feed.results;
     castList = list.map((player,i) => {
       name = player.name
-      return <Cast name={name}/>
+      return (
+        <Link to={'/cast'}>
+          <Cast name={name}/>
+        </Link>
+      )
     },this);
 
     return (
