@@ -30,9 +30,9 @@ class Index extends React.Component{
 
     list = this.props.feed.feed.results;
     castList = list.map((player,i) => {
-      name = player.name
+      const name = player.name;
       return (
-        <Link to={'/cast'}>
+        <Link to={`/cast/${name}`}>
           <Cast name={name}/>
         </Link>
       )
@@ -47,7 +47,7 @@ class Index extends React.Component{
               {castList}
             </div>
           )} />
-          <Route exact path="/cast" render= {() =>(
+          <Route path="/cast" render= {() =>(
             <div>
               <h1 className={'h1'}>Star Wars Cast</h1>
             </div>
