@@ -1,3 +1,5 @@
+import Cast from './cast';
+
 class Index extends React.Component{
   displayName: 'Index';
   constructor(props) {
@@ -26,12 +28,11 @@ class Index extends React.Component{
         </div>
       )
     }
+    console.log(Cast);
     list = this.props.feed.feed.results;
     castList = list.map((player,i) => {
       name = player.name
-      return (
-        <span className="info"> {name} </span>
-      )
+      return <Cast name={name}/>
     },this);
     return (
       <div>
