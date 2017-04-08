@@ -1,0 +1,211 @@
+// font-weight
+$font-weight-1: 300; // light
+$font-weight-3: 400; // medium
+$font-weight-4: 700; // bold
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700');
+
+@mixin main-font {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+@mixin font-weight($weight: medium) {
+
+  @if $weight == light {
+    font-weight: $font-weight-1;
+  }
+
+  @if $weight == medium {
+    font-weight: $font-weight-3;
+  }
+
+  @if $weight == bold {
+    font-weight: $font-weight-4;
+  }
+}
+
+@mixin tg-style($size, $line-height, $weight: null) {
+  @include main-font;
+  font-size: $size;
+  line-height: $line-height * $size;
+
+  @if $weight != null {
+    @include font-weight($weight);
+
+  } @else {
+    @include font-weight;
+  }
+
+}
+
+
+@mixin h1-style {
+  @include tg-style(48px, 1, bold);
+  @include screen(mobile) {
+    font-size: 32px;
+  }
+}
+
+@mixin h1 {
+  @include h1-style;
+  color: $c-main-1;
+}
+
+@mixin h2-style {
+  @include tg-style(40px, 1, bold);
+  @include screen(mobile) {
+    font-size: 24px;
+  };
+}
+
+@mixin h2 {
+  @include h2-style;
+
+  }
+
+@mixin h3-style {
+  @include tg-style(32px, 1, bold);
+  @include screen(mobile) {
+    font-size: 24px;
+    line-height: 29px;
+  };
+}
+
+@mixin h3 {
+  @include h3-style;
+
+}
+
+
+
+@mixin h4-style {
+  @include tg-style(32px, 35 / 32, light);
+  @include screen(mobile) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+@mixin h4 {
+  @include h4-style;
+
+}
+
+@mixin h5-style {
+  @include tg-style(24px, 32 / 24);
+  @include screen(mobile) {
+    font-size: 22px;
+    line-height: 1;
+  }
+}
+
+@mixin h5 {
+  @include h5-style;
+
+}
+
+@mixin h6-style {
+  @include tg-style(22px, 1, light);
+  @include screen(mobile) {
+    font-size: 17px;
+  }
+}
+
+@mixin h6 {
+  @include h6-style;
+
+}
+
+@mixin p-style {
+  @include tg-style(16px, 22 / 16, light);
+}
+
+@mixin p {
+  @include p-style;
+  color: $c-print-2;
+}
+
+
+@mixin ul {
+  @include clearfix;
+  display: block;
+  padding-left: 22px;
+}
+
+@mixin li {
+  display: list-item;
+  list-style: disc;
+}
+
+@mixin b {
+  @include font-weight(bold);
+}
+
+@mixin link-style {
+  @include tg-style(16px, 25 / 16, bold);
+}
+
+@mixin link {
+  @include link-style;
+  color: $c-main-1;
+}
+
+@mixin small {
+  @include tg-style(14px, 1.4);
+  color: $c-main-1;
+}
+
+@mixin typography {
+  html {
+    @include main-font;
+  }
+
+  h1 {
+    @include h1;
+  }
+
+  h2 {
+    @include h2;
+  }
+
+  h3 {
+    @include h3;
+  }
+
+  h4 {
+    @include h4;
+  }
+
+  h5 {
+    @include h5;
+  }
+
+  h6 {
+    @include h6;
+  }
+
+  p {
+    @include p;
+  }
+
+  ul {
+    @include ul;
+  }
+
+  li {
+    @include li;
+  }
+
+  b,
+  strong {
+    @include b;
+  }
+
+  a {
+    @include link;
+  }
+
+  small {
+    @include small;
+  }
+}

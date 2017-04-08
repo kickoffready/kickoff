@@ -11,13 +11,10 @@ class Index extends React.Component{
   displayName: 'Demo';
   render(){
     if(this.props.feed.fetched !== true) {
-      return <span> Loading.. </span>
+      return <span className="info"> Loading.. </span>
+
     }
-    return (
-        <section className={'react-demo'}>
-          <h1>R3 Star Wars</h1>
-        </section>
-    );
+    return <h1 className={'h1'}>R3 Star Wars</h1>
   }
 }
 

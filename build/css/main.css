@@ -135,26 +135,36 @@ table {
   border-spacing: 0;
 }
 
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700");
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  background-image: -webkit-linear-gradient(#fff, #ccc, #aaa);
-  background-image: linear-gradient(#fff, #ccc, #aaa);
-  min-height: 400px;
+.h1 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #ffd700;
 }
 
-body::before {
-  content: 'gulp bulid sass with prefixer , info : run gulp min-css for build/main.css';
-}
-
-h3 {
-  font-size: 45px;
-}
-
-@media (max-width: 300px) {
-  h3 {
-    font-size: 15px;
+@media (max-width: 1023px) {
+  .h1 {
+    font-size: 32px;
   }
+}
+
+.info {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px;
+  line-height: 19.6px;
+  font-weight: 400;
+  color: #ffd700;
+}
+
+.frame {
+  background-color: #000;
+  height: 100vh;
+  text-align: center;
 }
