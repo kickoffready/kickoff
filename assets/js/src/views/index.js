@@ -1,4 +1,5 @@
 import Cast from './cast';
+import Feedback from './feedback';
 
 class Index extends React.Component{
   displayName: 'Index';
@@ -13,7 +14,6 @@ class Index extends React.Component{
     this.props.feedFetch();
   }
 
-  // TODO: move feedback to a module
   render(){
     let list,
       castList;
@@ -22,18 +22,16 @@ class Index extends React.Component{
     }
     if(this.props.feed.fetchError === true) {
       return (
-        <div className="feedback">
-          <span className={"feedback__title"}>Something went wrong... would you like to try it again?</span>
-          <button className={"feedback__button"} onclick={this.reload.bind(this)}>Try it now </button>
-        </div>
+        <Feedback action={this.reload}/>
       )
     }
-    console.log(Cast);
+
     list = this.props.feed.feed.results;
     castList = list.map((player,i) => {
       name = player.name
       return <Cast name={name}/>
     },this);
+
     return (
       <div>
         <h1 className={'h1'}>R3 Star Wars</h1>
