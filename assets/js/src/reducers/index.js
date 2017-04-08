@@ -3,29 +3,32 @@ import {combineReducers} from 'redux';
 const imagesReducer = (state = {}, action) => {
   switch(action.type) {
     case 'ADD_IMAGE': {
-      state = {...state, image: action.content};
+      state = {...state, feed: action.content};
       break;
     }
   }
   return state;
 }
 
-const imagesFetch = (state = {}, action) => {
+const feedFetch = (state = {}, action) => {
   switch(action.type) {
     case 'RECEIVE': {
       console.log('RECEIVE')
-      state = {...state,images:action.content};
+      state = {...state, feed:action.content, fetched: true};
       break;
     }
     case 'ERROR': {
-     state = {...state, error:action.content};
-     break;
+      state = {...state, error:action.content};
+      break;
     }
   }
   return state;
 }
 
 export default combineReducers({
+  feed: {
+    fetched: false,
+  },
   images: imagesReducer,
-  imagesFeed: imagesFetch
+  feed: feedFetch
 })

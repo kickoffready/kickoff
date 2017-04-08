@@ -1,22 +1,24 @@
-class Main extends React.Component{
+class Index extends React.Component{
   constructor(props) {
     super(props);
-    this.add = () => {
-      this.props.addImage('450x456');
+    this.reload = () => {
+      this.props.feedFetch();
     }
   }
   componentWillMount(){
-    this.props.imagesFetch();
+    this.props.feedFetch();
   }
   displayName: 'Demo';
   render(){
+    if(this.props.feed.fetched !== true) {
+      return <span> Loading.. </span>
+    }
     return (
         <section className={'react-demo'}>
-          <h1>here is my react redux demo</h1>
-          <button onClick={this.add.bind(this)}>add</button>
+          <h1>R3 Star Wars</h1>
         </section>
     );
   }
 }
 
-export default Main
+export default Index

@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-export function imagesFetch(dispatch) {
+export function feedFetch(dispatch) {
   return (dispatch) => {
-    axios.get('//localhost:8080/api/images.json')
+    axios.get('http://swapi.co/api/people/?page=1')
       .then((response) => {
         dispatch({type: 'RECEIVE', content: response.data})
       })

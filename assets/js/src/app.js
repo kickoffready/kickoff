@@ -5,12 +5,12 @@ import * as actions from './actions';
 import store from './store';
 import {bindActionCreators} from 'redux';
 import {Provider,connect} from 'react-redux';
-import Main from './views';
+import Index from './views';
 
 function mapStateTOProps(state) {
   return {
     images: store.getState().images,
-    imagesFeed: store.getState().imagesFeed
+    feed: store.getState().feed
   }
 }
 
@@ -18,7 +18,7 @@ function mapDispachToProps(dispatch) {
   return bindActionCreators(actions,dispatch);
 }
 
-const ReduxMain = connect(mapStateTOProps,mapDispachToProps)(Main);
+const ReduxMain = connect(mapStateTOProps,mapDispachToProps)(Index);
 
 class Demo extends React.Component{
   render(){
