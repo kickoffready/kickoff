@@ -7,6 +7,9 @@ const webpack = require('webpack'),
 
 module.exports = {
   devtool: 'eval',
+  devServer: {
+    historyApiFallback: true
+  },
 
   entry: {
     app: './assets/js/src/app.js',
