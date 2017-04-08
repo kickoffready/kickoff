@@ -20,7 +20,7 @@ function mapDispachToProps(dispatch) {
 
 const ReduxMain = connect(mapStateTOProps,mapDispachToProps)(Index);
 
-class Demo extends React.Component{
+class Root extends React.Component{
   render(){
     return (
       <Provider store={store}>
@@ -30,4 +30,4 @@ class Demo extends React.Component{
   }
 }
 
-render(<Demo/>, document.getElementById('app'));
+render(<Root/>, document.getElementById('app'));

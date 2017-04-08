@@ -6,12 +6,15 @@ class Index extends React.Component{
       this.props.feedFetch();
     }
   }
+
   componentWillMount(){
     this.props.feedFetch();
   }
 
   // TODO: move feedback to a module
   render(){
+    let list,
+      castList;
     if(this.props.feed.fetched !== true && this.props.feed.fetchError !== true) {
       return <span className="info"> Loading.. </span>
     }
@@ -23,7 +26,19 @@ class Index extends React.Component{
         </div>
       )
     }
-    return <h1 className={'h1'}>R3 Star Wars</h1>
+    list = this.props.feed.feed.results;
+    castList = list.map((player,i) => {
+      name = player.name
+      return (
+        <span className="info"> {name} </span>
+      )
+    },this);
+    return (
+      <div>
+        <h1 className={'h1'}>R3 Star Wars</h1>
+        {castList}
+      </div>
+    )
   }
 }
 
