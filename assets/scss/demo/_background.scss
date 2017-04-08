@@ -1,0 +1,8 @@
+body {
+  $color-a: #abc;
+  $color-b: #ccc;
+  $color-c: #aaa;
+  $c-white: #fff;
+  background-image: linear-gradient($c-white, $color-b, $color-c);
+  min-height: 400px;
+}
