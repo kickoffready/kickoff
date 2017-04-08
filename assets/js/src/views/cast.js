@@ -5,7 +5,7 @@ class Cast extends React.Component{
   }
   render(){
     return (
-      <span className="info" > {this.props.name} </span>
+      <span className="cast" > {this.props.name} </span>
     )
   }
 }

@@ -182,6 +182,22 @@ table {
   color: #ffd700;
 }
 
+.cast {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #ffd700;
+  display: inline-block;
+  padding: 16px 24px;
+}
+
+@media (max-width: 1023px) {
+  .cast {
+    font-size: 24px;
+  }
+}
+
 .feedback::after {
   clear: both;
   content: '';
