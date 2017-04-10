@@ -1,6 +1,7 @@
 .frame {
+  @include clearfix;
   background-color: $c-background;
-  height: 100vh;
+  min-height: 100vh;
   padding: 48px;
   text-align: center;
 }

@@ -236,7 +236,13 @@ table {
 
 .frame {
   background-color: #000;
-  height: 100vh;
+  min-height: 100vh;
   padding: 48px;
   text-align: center;
+}
+
+.frame::after {
+  clear: both;
+  content: '';
+  display: table;
 }
