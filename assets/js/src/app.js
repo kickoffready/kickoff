@@ -9,8 +9,8 @@ import Index from './views';
 
 function mapStateTOProps(state) {
   return {
-    images: store.getState().images,
-    feed: store.getState().feed
+    feed: store.getState().feed,
+    images: store.getState().images
   }
 }
 

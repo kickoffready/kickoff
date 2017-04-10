@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-export function feedFetch(dispatch) {
+export function feedFetch(url, dispatch = dispatch) {
   return (dispatch) => {
-    axios.get('http://swapi.co/api/people/?page=1')
+    axios.get('http://swapi.co/api/' + url)
       .then((response) => {
         dispatch({type: 'RECEIVE', content: response.data})
       })

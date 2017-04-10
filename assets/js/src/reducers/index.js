@@ -26,9 +26,6 @@ const feedFetch = (state = {}, action) => {
 }
 
 export default combineReducers({
-  feed: {
-    fetched: false,
-  },
   images: imagesReducer,
   feed: feedFetch
 })

@@ -8,12 +8,17 @@ class Index extends React.Component{
   constructor(props) {
     super(props);
     this.reload = () => {
-      this.props.feedFetch();
+      this.initFeed();
     }
   }
 
   componentWillMount(){
-    this.props.feedFetch();
+    this.initFeed();
+  }
+
+  initFeed(){
+    const initLink = this.props.feed.api.init;
+    this.props.feedFetch(initLink);
   }
 
   render(){

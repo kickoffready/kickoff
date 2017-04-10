@@ -11,7 +11,18 @@ const composeEnhancers =
 
 const enhancers = composeEnhancers(middleware);
 
+const initialState = {
+  feed: {
+    api: {
+      init: 'people/?page=1', 
+      last: 'people/?page=1'
+    },
+    fetched: false
+  },
+}
+
 export default createStore(
   reducers,
+  initialState,
   enhancers
 );
