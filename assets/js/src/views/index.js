@@ -46,7 +46,6 @@ class Index extends React.Component{
     return (
       <Router>
         <div>
-          <Route exact path="/" reunder = {() => {<Redirect to="/page"/>}} />
           <Route path="/page" render= {() =>(
             <div>
               <h1 className={'h1'}>R3 Star Wars</h1>
@@ -60,6 +59,7 @@ class Index extends React.Component{
               <h1 className={'h1'}>Star Wars Cast</h1>
             </div>
           )} />
+          <Redirect from="/" to="/page"/>
         </div>
       </Router>
     )
