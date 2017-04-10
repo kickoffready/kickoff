@@ -1,5 +1,5 @@
 class Feedback extends React.Component{
-  displayName: 'Cast';
+  displayName: 'Feedback';
   constructor(props) {
     super(props);
     this.reload = () => {

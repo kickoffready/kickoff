@@ -1,7 +1,8 @@
 import Cast from './cast';
 import Feedback from './feedback';
+import Pagination from './pagination';
 import React from 'react';
-import { BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Redirect} from 'react-router-dom';
 
 class Index extends React.Component{
   displayName: 'Index';
@@ -38,20 +39,21 @@ class Index extends React.Component{
       const name = player.name,
         link = name.replace(/\s+/g, '-').toLowerCase();
       return (
-        <Link to={`/cast/${link}`}>
-          <Cast name={name}/>
-        </Link>
+        <Cast name={name} link={link}/>
       )
     },this);
 
     return (
       <Router>
         <div>
-          <Route exact={true} path="/" render= {() =>(
+          <Route exact path="/" reunder = {() => {<Redirect to="/page"/>}} />
+          <Route path="/page" render= {() =>(
             <div>
               <h1 className={'h1'}>R3 Star Wars</h1>
               {castList}
+              <Pagination link={this.props.feed.feed.next} action={this.fetch} />
             </div>
+
           )} />
           <Route path="/cast" render= {() =>(
             <div>
@@ -64,4 +66,4 @@ class Index extends React.Component{
   }
 }
 
-export default Index
+export default Index;

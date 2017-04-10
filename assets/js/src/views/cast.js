@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 class Cast extends React.Component{
   displayName: 'Cast';
   constructor(props) {
@@ -5,7 +7,7 @@ class Cast extends React.Component{
   }
   render(){
     return (
-      <span className="cast" > {this.props.name} </span>
+      <Link to={`/cast/${this.props.link}`} className="cast" > {this.props.name} </Link>
     )
   }
 }
