@@ -1,8 +1,8 @@
-import Cast from './cast';
+import Page from './page';
 import Feedback from './feedback';
-import Pagination from './pagination';
+
 import React from 'react';
-import { BrowserRouter as Router, Link, Route, Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Redirect } from 'react-router-dom';
 
 class Index extends React.Component{
   displayName: 'Index';
@@ -23,8 +23,6 @@ class Index extends React.Component{
   }
 
   render(){
-    let list,
-      castList;
     if(this.props.feed.fetched !== true && this.props.feed.fetchError !== true) {
       return <span className="info"> Loading.. </span>
     }
@@ -34,32 +32,18 @@ class Index extends React.Component{
       )
     }
 
-    list = this.props.feed.feed.results;
-    castList = list.map((player,i) => {
-      const name = player.name,
-        link = name.replace(/\s+/g, '-').toLowerCase();
-      return (
-        <Cast name={name} link={link}/>
-      )
-    },this);
-
     return (
       <Router>
         <div>
-          <Route path="/page" render= {() =>(
-            <div>
-              <h1 className={'h1'}>R3 Star Wars</h1>
-              {castList}
-              <Pagination link={this.props.feed.feed.next} action={this.fetch} />
-            </div>
-
+          <Route path="/page/:nextLink" render= {() =>(
+           <Page feed={this.props.feed.feed}/>
           )} />
           <Route path="/cast" render= {() =>(
             <div>
               <h1 className={'h1'}>Star Wars Cast</h1>
             </div>
           )} />
-          <Redirect from="/" to="/page"/>
+          <Redirect from="/" to="/page/1"/>
         </div>
       </Router>
     )
