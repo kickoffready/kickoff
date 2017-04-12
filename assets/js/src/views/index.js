@@ -23,10 +23,11 @@ class Index extends React.Component{
   }
 
   render(){
-    if(this.props.feed.fetched !== true && this.props.feed.fetchError !== true) {
+    const {feed,fetched, fetchError} = this.props.feed;
+    if(fetched !== true && fetchError !== true) {
       return <span className="info"> Loading.. </span>
     }
-    if(this.props.feed.fetchError === true) {
+    if(fetchError === true) {
       return (
         <Feedback action={this.reload}/>
       )
@@ -36,7 +37,7 @@ class Index extends React.Component{
       <Router>
         <div>
           <Route path="/page/:nextLink" render= {() =>(
-           <Page feed={this.props.feed.feed}/>
+           <Page feed={feed}/>
           )} />
           <Route path="/cast" render= {() =>(
             <div>
