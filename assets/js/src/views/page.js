@@ -7,8 +7,16 @@ class Page extends React.Component{
     super(props);
   }
 
+  componentWillMount(){
+    //TODO if it is not from home page re fetch
+  }
+
   render(){
-    const {results, next} = this.props.feed,
+    const {fetched} = this.props.main.feed
+    if(fetched === false) {
+      return <h1> loading </h1>
+    }
+    const {results,next} = this.props.main.feed.feed,
       castList = results.map((player,i) => {
         const name = player.name,
           link = name.replace(/\s+/g, '-').toLowerCase();

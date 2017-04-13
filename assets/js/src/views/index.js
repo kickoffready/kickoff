@@ -23,28 +23,34 @@ class Index extends React.Component{
   }
 
   render(){
-    const {feed,fetched, fetchError} = this.props.feed;
-    if(fetched !== true && fetchError !== true) {
+    const {fetched, fetchError, fetching} = this.props.feed;
+    if(fetching === true) {
       return <span className="info"> Loading.. </span>
     }
+
     if(fetchError === true) {
       return (
         <Feedback action={this.reload}/>
       )
     }
 
+    const PageBundle = (props) => {
+      const bundle = {...props, main:this.props};
+      return (
+        <Page {...bundle}/>
+      );
+    }
+
     return (
       <Router>
         <div>
-          <Route path="/page/:nextLink" render= {() =>(
-           <Page feed={feed}/>
-          )} />
+          <Redirect from="/" to="/page/1"/>
+          <Route path="/page/:nextLink" render={PageBundle} />
           <Route path="/cast" render= {() =>(
             <div>
               <h1 className={'h1'}>Star Wars Cast</h1>
             </div>
           )} />
-          <Redirect from="/" to="/page/1"/>
         </div>
       </Router>
     )
