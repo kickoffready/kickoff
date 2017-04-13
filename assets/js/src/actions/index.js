@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export function feedFetch(url, dispatch = dispatch) {
   return (dispatch) => {
+    dispatch({type:'FETCHING', content: true});
     axios.get('http://swapi.co/api/' + url)
       .then((response) => {
         dispatch({type: 'RECEIVE', content: response.data})

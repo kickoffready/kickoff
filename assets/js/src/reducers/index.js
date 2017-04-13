@@ -12,13 +12,16 @@ const imagesReducer = (state = {}, action) => {
 
 const feedFetch = (state = {}, action) => {
   switch(action.type) {
+    case 'FETCHING': {
+      state = {...state, fetching: true, fetchError: false};
+      break;
+    }
     case 'RECEIVE': {
-      console.log('RECEIVE')
-      state = {...state, feed:action.content, fetched: true};
+      state = {...state, feed:action.content, fetched: true, fetching: false, };
       break;
     }
     case 'ERROR': {
-      state = {...state, error:action.content, fetchError: true};
+      state = {...state, error:action.content, fetchError: true, fetching: false};
       break;
     }
   }
