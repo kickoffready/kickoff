@@ -1,5 +1,6 @@
 import Page from './page';
 import Feedback from './feedback';
+import Pagination from './pagination';
 
 import React from 'react';
 import { BrowserRouter as Router, Link, Route, Redirect } from 'react-router-dom';
@@ -24,6 +25,8 @@ class Index extends React.Component{
 
   render(){
     const {fetched, fetchError, fetching} = this.props.feed;
+    let next;
+
     if(fetching === true) {
       return <span className="info"> Loading.. </span>
     }
@@ -34,12 +37,18 @@ class Index extends React.Component{
       )
     }
 
+    if(fetched === true) {
+      next = this.props.feed.feed.next;
+    }
+
     const PageBundle = (props) => {
       const bundle = {...props, main:this.props};
       return (
         <Page {...bundle}/>
       );
     }
+
+
 
     return (
       <Router>
@@ -50,6 +59,9 @@ class Index extends React.Component{
             <div>
               <h1 className={'h1'}>Star Wars Cast</h1>
             </div>
+          )} />
+          <Route path="/" render= {() =>(
+            <Pagination link={next} />
           )} />
         </div>
       </Router>
