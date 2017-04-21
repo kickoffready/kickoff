@@ -17,7 +17,7 @@ class Page extends React.Component{
         const name = player.name,
           link = name.replace(/\s+/g, '-').toLowerCase();
         return (
-          <Cast name={name} link={link}/>
+          <Cast name={name} link={link} key={i}/>
         )
       },this);
 
