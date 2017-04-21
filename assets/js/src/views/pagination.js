@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import Nav from './nav';
 
 class Pagination extends React.Component{
   displayName: 'Pagination';
@@ -7,12 +7,12 @@ class Pagination extends React.Component{
   }
 
   render(){
-    if(typeof this.props.link === 'undefined') {
-      return null;
-    } 
-    const nextLink = this.props.link.split('page=')[1];
+    const {next, prev} = this.props;
     return (
-      <Link to={`/page/${nextLink}`} className={"button-1"}> next </Link>
+      <div>
+        <Nav name={'Prev'} link={prev}/>
+        <Nav name={'Next'} link={next}/>
+      </div>
     )
   }
 }

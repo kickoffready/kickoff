@@ -25,7 +25,8 @@ class Index extends React.Component{
 
   render(){
     const {fetched, fetchError, fetching} = this.props.feed;
-    let next;
+    let next,
+      previous;
 
     if(fetching === true) {
       return <span className="info"> Loading.. </span>
@@ -39,6 +40,7 @@ class Index extends React.Component{
 
     if(fetched === true) {
       next = this.props.feed.feed.next;
+      previous = this.props.feed.feed.previous;
     }
 
     const PageBundle = (props) => {
@@ -61,7 +63,7 @@ class Index extends React.Component{
             </div>
           )} />
           <Route path="/" render= {() =>(
-            <Pagination link={next} />
+            <Pagination next={next} prev={previous}/>
           )} />
         </div>
       </Router>
