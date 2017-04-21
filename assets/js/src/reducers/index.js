@@ -24,6 +24,14 @@ const feedFetch = (state = {}, action) => {
       state = {...state, error:action.content, fetchError: true, fetching: false};
       break;
     }
+    case 'UPDATE API FETCHED': {
+      state = {...state, apiFetched: action.content};
+      break;
+    }
+    case 'UPDATE API TARGET': {
+      state = {...state, apiTarget: action.content};
+      break;
+    }
   }
   return state;
 }

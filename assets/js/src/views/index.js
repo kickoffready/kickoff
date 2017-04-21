@@ -19,7 +19,7 @@ class Index extends React.Component{
   }
 
   initFeed(){
-    const initLink = this.props.feed.api.init;
+    const initLink = this.props.feed.apiTarget;
     this.props.feedFetch(initLink);
   }
 
