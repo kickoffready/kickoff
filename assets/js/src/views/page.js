@@ -8,16 +8,24 @@ class Page extends React.Component{
   }
 
   componentWillMount(){
-    const pageApi = this.generateLink(this.props.match.params.pageLink);
-    this.props.action(pageApi);
+    this.passParams();
+  }
+
+  componentDidUpdate() {
+    this.passParams();
   }
 
   generateLink(id) {
     return 'people/?page=' + id;
   }
 
+  passParams(){
+    const pageApi = this.generateLink(this.props.match.params.pageLink);
+    this.props.action(pageApi);
+  }
+
   render(){
-    const {fetched} = this.props.main
+    const {fetched} = this.props.main;
     if(fetched === false) {
       return <h1> loading </h1>
     }
