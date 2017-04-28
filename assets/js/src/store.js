@@ -14,7 +14,7 @@ const enhancers = composeEnhancers(middleware);
 const initialState = {
   feed: {
     apiFetched: '',
-    apiTarget: 'people/?page=1',
+    apiTarget: '',
     fetched: false
   },
 }

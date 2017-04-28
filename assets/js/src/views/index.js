@@ -24,7 +24,7 @@ class Index extends React.Component{
     if(typeof params === 'undefined') {
       params = this.props.feed.apiTarget;
     }
-    if (params.localeCompare(this.props.feed.apiFetched)) {
+    if (params.localeCompare(this.props.feed.apiFetched) !== 0) {
       this.props.feedFetch(params);
     }
   }
