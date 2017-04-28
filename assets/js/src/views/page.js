@@ -7,12 +7,21 @@ class Page extends React.Component{
     super(props);
   }
 
+  componentWillMount(){
+    const pageApi = this.generateLink(this.props.match.params.pageLink);
+    this.props.action(pageApi);
+  }
+
+  generateLink(id) {
+    return 'people/?page=' + id;
+  }
+
   render(){
-    const {fetched} = this.props.main.feed
+    const {fetched} = this.props.main
     if(fetched === false) {
       return <h1> loading </h1>
     }
-    const {results} = this.props.main.feed.feed,
+    const {results} = this.props.main.feed,
       castList = results.map((player,i) => {
         const name = player.name,
           link = name.replace(/\s+/g, '-').toLowerCase();

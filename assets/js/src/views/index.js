@@ -12,10 +12,18 @@ class Index extends React.Component{
     this.reload = () => {
       this.loadFeed();
     }
+
+    this.routeMatch = this.routeMatch.bind(this);
   }
 
   componentWillMount(){
     this.loadFeed();
+  }
+
+  routeMatch(params){
+    if(params !== 'undefined') {
+      console.log(params);
+    }
   }
 
   loadFeed(){
@@ -45,9 +53,9 @@ class Index extends React.Component{
     }
 
     const PageBundle = (props) => {
-      const bundle = {...props, main:this.props};
+      const bundle = {...props, main:this.props.feed};
       return (
-        <Page {...bundle}/>
+        <Page {...bundle} action={this.routeMatch}/>
       );
     }
 
@@ -55,7 +63,7 @@ class Index extends React.Component{
       <Router>
         <div>
           <Redirect from="/" to="/page/1"/>
-          <Route path="/page/:nextLink" render={PageBundle} />
+          <Route path="/page/:pageLink" render={PageBundle} />
           <Route path="/cast" render= {() =>(
             <div>
               <h1 className={'h1'}>Star Wars Cast</h1>
