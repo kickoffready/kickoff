@@ -68,7 +68,7 @@ class Index extends React.Component{
               <h1 className={'h1'}>Star Wars Cast</h1>
             </div>
           )} />
-          <Route path="/" render= {() =>(
+          <Route path="/page" render= {() =>(
             <Pagination next={next} prev={previous}/>
           )} />
         </div>
