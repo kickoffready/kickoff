@@ -10,17 +10,18 @@ class Index extends React.Component{
   constructor(props) {
     super(props);
     this.reload = () => {
-      this.initFeed();
+      this.loadFeed();
     }
   }
 
   componentWillMount(){
-    this.initFeed();
+    this.loadFeed();
   }
 
-  initFeed(){
-    const initLink = this.props.feed.apiTarget;
-    this.props.feedFetch(initLink);
+  loadFeed(){
+    if (this.props.feed.apiTarget !== this.props.feed.apiFetched) {
+      this.props.feedFetch(this.props.feed.apiTarget);
+    }
   }
 
   render(){
@@ -49,8 +50,6 @@ class Index extends React.Component{
         <Page {...bundle}/>
       );
     }
-
-
 
     return (
       <Router>
