@@ -16,19 +16,16 @@ class Index extends React.Component{
     this.routeMatch = this.routeMatch.bind(this);
   }
 
-  componentWillMount(){
-    this.loadFeed();
-  }
-
   routeMatch(params){
-    if(params !== 'undefined') {
-      console.log(params);
-    }
+    this.loadFeed(params);
   }
 
-  loadFeed(){
-    if (this.props.feed.apiTarget !== this.props.feed.apiFetched) {
-      this.props.feedFetch(this.props.feed.apiTarget);
+  loadFeed(params){
+    if(typeof params === 'undefined') {
+      params = this.props.feed.apiTarget;
+    }
+    if (params.localeCompare(this.props.feed.apiFetched)) {
+      this.props.feedFetch(params);
     }
   }
 
@@ -62,7 +59,9 @@ class Index extends React.Component{
     return (
       <Router>
         <div>
-          <Redirect from="/" to="/page/1"/>
+          <Route exact path="/" render={() => (
+              <Redirect to="/page/1"/>
+          )}/>
           <Route path="/page/:pageLink" render={PageBundle} />
           <Route path="/cast" render= {() =>(
             <div>
