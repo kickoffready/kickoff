@@ -5,8 +5,8 @@ export function feedFetch(url, dispatch = dispatch) {
     dispatch({type:'FETCHING'});
     axios.get('http://swapi.co/api/' + url)
       .then((response) => {
-        dispatch({type: 'RECEIVE', content: response.data});
-        dispatch({type:'UPDATE API FETCHED', content: url});
+        dispatch({type: 'UPDATE API FETCHED', content: url});
+        dispatch({type: 'RECEIVED', content: response.data});
       })
       .catch((err) => {
         dispatch({type: 'ERROR', content: err})

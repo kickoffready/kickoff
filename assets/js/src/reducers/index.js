@@ -16,7 +16,7 @@ const feedFetch = (state = {}, action) => {
       state = {...state, fetching: true, fetchError: false};
       break;
     }
-    case 'RECEIVE': {
+    case 'RECEIVED': {
       state = {...state, feed:action.content, fetched: true, fetching: false, };
       break;
     }
