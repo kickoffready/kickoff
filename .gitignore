@@ -11,3 +11,13 @@ bower_components
 server.bundle.js
 
 build/
+
+*.log
+
+.eslintrc
+
+.sass-lint.yml
+
+.eslintrc
+
+.scss-lint.yml
