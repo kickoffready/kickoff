@@ -13,11 +13,22 @@ class Index extends React.Component{
       this.loadFeed();
     }
 
+    this.state = {
+      search : ''
+    }
+
+    this.searchInput = this.searchInput.bind(this);
     this.routeMatch = this.routeMatch.bind(this);
   }
 
   routeMatch(params){
     this.loadFeed(params);
+  }
+
+  searchInput(event) {
+    const inputValue = 'event.target.value';
+    console.log(inputValue);
+    this.setState((prevState, props, inputValue) => ({search: 'tees'}));
   }
 
   loadFeed(params){
@@ -59,6 +70,7 @@ class Index extends React.Component{
     return (
       <Router>
         <div>
+          <input type="text" placeholder="Search" name="search" onChange={this.searchInput} value={this.state.search} />
           <Route exact path="/" render={() => (
               <Redirect to="/page/1"/>
           )}/>
