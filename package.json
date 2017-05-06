@@ -14,7 +14,7 @@
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^6.10.3",
     "gulp": "^3.9.1",
-    "sl-fe-lint": "^1.3.0",
+    "sl-fe-lint": "^1.4.0",
     "sl-gt-synclint": "^1.1.1",
     "sl-gt-sass-autoprefixer": "^1.1.1",
     "webpack": "^2.3.2",
