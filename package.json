@@ -13,12 +13,16 @@
     "babel-preset-stage-2": "^6.22.0",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^6.10.3",
+    "gulp": "^3.9.1",
+    "sl-fe-lint": "^1.3.0",
+    "sl-gt-synclint": "^1.1.1",
     "webpack": "^2.3.2",
     "webpack-dev-server": "^2.4.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "./node_modules/.bin/eslint assets/js",
+    "lint-sync": "gulp synclint-copy --path sl-fe-lint",
     "start": "node node_modules/.bin/webpack-dev-server --inline --hot"
   },
   "repository": {
