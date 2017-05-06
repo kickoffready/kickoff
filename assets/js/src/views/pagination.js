@@ -1,19 +1,24 @@
 import Nav from './nav';
+import React from 'react';
 
-class Pagination extends React.Component{
+class Pagination extends React.Component {
   displayName: 'Pagination';
   constructor(props) {
     super(props);
   }
 
-  render(){
+  render() {
     const {next, prev} = this.props;
     return (
       <div>
-        <Nav name={'Prev'} link={prev}/>
-        <Nav name={'Next'} link={next}/>
+        <Nav link={prev}
+            name={'Prev'}
+        />
+        <Nav  link={next}
+            name={'Next'}
+        />
       </div>
-    )
+    );
   }
 }
 

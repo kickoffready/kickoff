@@ -1,4 +1,4 @@
-import {createStore, compose, applyMiddleware} from 'redux';
+import {createStore, compose} from 'redux';
 import middleware from './middleware';
 import reducers from './reducers';
 
@@ -7,17 +7,16 @@ const composeEnhancers =
   typeof window === 'object' &&
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-    }) : compose;
+    }) : compose,
+  enhancers = composeEnhancers(middleware),
 
-const enhancers = composeEnhancers(middleware);
-
-const initialState = {
-  feed: {
-    apiFetched: '',
-    apiTarget: '',
-    fetched: false
-  },
-}
+  initialState = {
+    feed: {
+      apiFetched: '',
+      apiTarget: '',
+      fetched: false
+    }
+  };
 
 export default createStore(
   reducers,

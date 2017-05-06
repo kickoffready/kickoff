@@ -1,11 +1,13 @@
 import {Link} from 'react-router-dom';
-class Nav extends React.Component{
+import React from 'react';
+
+class Nav extends React.Component {
   displayName: 'Nav';
   constructor(props) {
     super(props);
   }
 
- render(){
+  render() {
     let pageLink;
     if(typeof this.props.link !== 'string') {
       return null;
@@ -16,8 +18,11 @@ class Nav extends React.Component{
     }
 
     return (
-      <Link to={`/page/${pageLink}`} className={"button-1"}> {this.props.name} </Link>
-    )
+      <Link  className={'button-1'}
+          to={`/page/${pageLink}`}
+      >
+          {this.props.name} </Link>
+    );
   }
 }
 

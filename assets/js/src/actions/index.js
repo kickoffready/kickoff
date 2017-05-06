@@ -9,16 +9,16 @@ export function feedFetch(url, dispatch = dispatch) {
         dispatch({type: 'RECEIVED', content: response.data});
       })
       .catch((err) => {
-        dispatch({type: 'ERROR', content: err})
-      })
+        dispatch({type: 'ERROR', content: err});
+      });
     dispatch({type:'UPDATE API TARGET', content: url});
-  }
+  };
 }
 
-export function addImage(size){
+export function addImage() {
   return {
     type:'ADD_IMAGE',
     content: {
     }
-  }
+  };
 }
