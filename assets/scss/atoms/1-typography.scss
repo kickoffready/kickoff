@@ -4,7 +4,7 @@ $font-weight-3: 400; // medium
 $font-weight-4: 700; // bold
 
 @mixin main-font {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 @mixin font-weight($weight: medium) {
