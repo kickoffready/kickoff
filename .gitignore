@@ -22,3 +22,6 @@ build/
 .eslintrc
 
 .scss-lint.yml
+
+build
+dist

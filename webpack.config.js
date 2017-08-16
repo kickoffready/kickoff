@@ -12,15 +12,13 @@ module.exports = {
   },
 
   entry: {
-    app: './assets/js/src/app.js',
-    main: './assets/js/src/main.js',
-    page: './assets/js/src/page.js'
+    app: './assets/js/src/app.js'
   },
 
   externals: {
-    react: 'React',
+    'react': 'React',
     'react-dom': 'ReactDOM',
-    axios: 'axios'
+    'axios': 'axios'
   },
 
   module: {
@@ -31,8 +29,8 @@ module.exports = {
   },
 
   output: {
-    path: (path.join(__dirname,'/build/js')),
-    publicPath:'build/js',
+    path: (path.join(__dirname,'/dist/js')),
+    publicPath:'dist/js',
     filename: '[name]-bundle.js'
   },
 /* TODO: build config.js

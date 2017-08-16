@@ -1,5 +1,6 @@
 const gulp = require('gulp'),
   options = {
+    cssFolder: 'dist/css'
   };
 
 require('sl-gt-synclint')(gulp);
