@@ -1,7 +1,7 @@
 {
-  "name": "kickoff",
-  "version": "0.0.3",
-  "description": "inital web project",
+  "name": "stream os",
+  "version": "0.0.1",
+  "description": "stream web project",
   "main": "doesnothaveindex.js",
   "devDependencies": {
     "babel-cli": "^6.24.0",
@@ -31,7 +31,7 @@
     "url": "git+https://github.com/seeliang/kickoff.git"
   },
   "keywords": [
-    "kickoff"
+    "react"
   ],
   "author": "sihui",
   "license": "ISC",
