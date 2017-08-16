@@ -1,11 +1,10 @@
-node_modules
-.project
 *.scssc
-*-cache*
 *.log
 *.swp
-*.log
+*-cache*
 .eslintrc
+.project
 .sass-lint.yml
 .scss-lint.yml
 dist
+node_modules
