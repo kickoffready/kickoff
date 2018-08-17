@@ -1,4 +1,4 @@
-# kickoff
-### Front End Playground
+# Kick Off
+### Front End Dependency Packages 
 
-[Section list](https://github.com/seeliang/kickoff/branches)
+
