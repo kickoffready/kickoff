@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "dev-env": "NODE_ENV=dev yarn webpack-dev-server --progress --inline --hot --mode development --https",
+    "start": "yarn gulp vendor:dev & yarn dev-env"
+  }
+}
