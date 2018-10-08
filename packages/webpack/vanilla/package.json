@@ -1,0 +1,12 @@
+{
+  "peerDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "name": "ko-webpack-vanilla",
+  "version": "1.0.1",
+  "description": "the base of webpack solution in kick off packages ",
+  "main": "src/index.js",
+  "author": "shui liang",
+  "license": "MIT"
+}

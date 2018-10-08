@@ -9,3 +9,8 @@ bower_components
 *.swp
 
 server.bundle.js
+
+.tgz
+package
+lib
+dist

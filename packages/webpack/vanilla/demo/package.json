@@ -1,0 +1,19 @@
+{
+  "name": "webpack-vanilla-demo",
+  "version": "1.0.0",
+  "description": "the demo of how to use kick off packages with vanilla javascript",
+  "main": "index.js",
+  "author": "sihui liang",
+  "license": "MIT",
+  "devDependencies": {
+    "ko-webpack-vanilla": "../src",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "scripts": {
+    "dev-env": "NODE_ENV=dev yarn webpack-dev-server --progress --inline --hot --mode development --https",
+    "start": "yarn dev-env",
+    "build": "NODE_ENV=prod yarn webpack --mode production"
+  }
+}
