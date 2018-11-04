@@ -9,5 +9,9 @@
   "repository": "https://github.com/seeliang/kickoff/tree/master/packages/webpack/vanilla",
   "main": "src/index.js",
   "author": "shui liang",
+  "keywords": [
+    "webpack",
+    "compile"
+  ],
   "license": "MIT"
 }
