@@ -11,7 +11,7 @@
   "name": "ko-eslint-react",
   "version": "1.0.0",
   "description": "the eslint solution in kick off packages ",
-  "repository": "https://github.com/seeliang/kickoff/tree/master/packages/webpack/vanilla",
+  "repository": "https://github.com/seeliang/kickoff/tree/master/packages/eslint/react",
   "main": "index.js",
   "author": "sihui liang",
   "keywords": [
