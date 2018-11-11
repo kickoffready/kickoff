@@ -9,5 +9,6 @@ notifications:
   email:
     - sway.liang@gmail.com
 script: 
-  - cd packages/webpack/vanilla/demo
+  - cd packages/webpack/vanilla/demo/
+  - npm install
   - npm run build
