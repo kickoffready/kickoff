@@ -9,5 +9,6 @@ notifications:
   email:
     - sway.liang@gmail.com
 script: 
-  - cd packages/webpack/vanilla/demo
-  - npm run build
+  - cd packages/webpack/vanilla/demo/
+  - yarn
+  - yarn build
