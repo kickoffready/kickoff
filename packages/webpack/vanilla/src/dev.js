@@ -9,11 +9,18 @@ const dev = {
       include: __dirname,
     }],
   },
+  mode: "development",
+   devServer: {
+     hot: true,
+     progress: true,
+     inline: true,
+   },
   plugins: [
     new webpack.SourceMapDevToolPlugin({
       filename: '[name].js.map',
       exclude: ['vendor.js'],
     }),
+    new webpack.HotModuleReplacementPlugin()
   ],
 };
 
