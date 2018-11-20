@@ -13,7 +13,7 @@
     "yarn": "^1.12.3"
   },
   "scripts": {
-    "dev-env": "NODE_ENV=dev yarn webpack-dev-server --progress --inline --hot --mode development --https",
+    "dev-env": "NODE_ENV=dev yarn webpack-dev-server  --https",
     "start": "yarn dev-env",
     "build": "NODE_ENV=prod yarn webpack --mode production"
   }
