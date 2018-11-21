@@ -1,7 +1,8 @@
 const webpack = require('webpack');
 const base = require('./base.js');
+const defaultOptions = require('./default');
 
-const dev = {
+const devSet = {
   module: {
     rules: [{
       test: /\.js$/,
@@ -10,7 +11,7 @@ const dev = {
     }],
   },
   mode: "development",
-   devServer: {
+  devServer: {
      hot: true,
      progress: true,
      inline: true,
@@ -24,4 +25,9 @@ const dev = {
   ],
 };
 
-module.exports = Object.assign(base, dev);
+const dev = (options = defaultOptions) => {
+  console.log('\n' + 'OK, we will load config for dev \n'); 
+  return Object.assign({}, base, devSet, options)
+}
+
+module.exports = dev;
