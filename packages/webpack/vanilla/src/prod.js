@@ -1,20 +1,14 @@
-const path = require('path');
+const base = require('./base');
+const defaultOptions = require('./default');
+const path = require('path')
 
+const prod = (options = defaultOptions) => {
+  console.log('\n' + 'OK, we will use default webpack function for prod \n'); 
+  return Object.assign({}, base, options, {
+    output: {
+      path: (path.join(__dirname + `../../`, '/dist/js')),
+    }
+  })
+}
 
-module.exports = {
-  entry: {
-    app: './src/index.js',
-  },
-
-  output: {
-    path: (path.join(__dirname + `../../`, '/dist/js')),
-    publicPath: 'dist/js',
-    filename: '[name].js',
-  },
-
-  resolve: {
-    modules: [
-      'node_modules',
-    ],
-  },
-};
+module.exports = prod;

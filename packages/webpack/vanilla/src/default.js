@@ -1,3 +1,4 @@
+
 module.exports = {
   entry: {
     app: './src/index.js',
@@ -7,11 +8,5 @@ module.exports = {
     path: ('/dist/js'),
     publicPath: 'dist/js',
     filename: '[name].js',
-  },
-
-  resolve: {
-    modules: [
-      'node_modules',
-    ],
   },
 };
