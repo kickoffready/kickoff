@@ -13,5 +13,8 @@
     "webpack",
     "compile"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
 }
