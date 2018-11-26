@@ -9,13 +9,13 @@ describe('prod', () => {
       },
     
       output: {
-        path: (path.join(__dirname + `../../`, '/build/js')),
+        path: '/build/js',
         publicPath: 'build/js',
         filename: '[name].js',
       },
     }
-    const build = Object.assign({},prod,options);
+    const build = prod(options);
     expect(build.entry).toEqual(options.entry);
-    expect(build.output).toEqual(options.output);
+    expect(build.output.path).toEqual(path.join(__dirname + `../../../`, options.output.path));
   })
 })
