@@ -10,7 +10,7 @@ const config = options => {
   }
   
   if(process.env.NODE_ENV === 'dev') {
-    settings = dev(options);
+    settings = dev(set);
   }
   
   return settings;
