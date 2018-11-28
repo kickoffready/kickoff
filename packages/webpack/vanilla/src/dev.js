@@ -25,9 +25,9 @@ const devSet = {
   ],
 };
 
-const dev = (options = defaultOptions) => {
+const dev = () => {
   console.log('\n' + 'OK, we will load config for dev \n'); 
-  return Object.assign({}, base, devSet, options)
+  return Object.assign({}, base, devSet)
 }
 
 module.exports = dev;
