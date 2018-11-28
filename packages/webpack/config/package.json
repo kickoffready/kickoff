@@ -1,0 +1,10 @@
+{
+  "name": "ko-webpack-config",
+  "version": "0.1.0",
+  "description": "webpack config loader",
+  "main": "index.js",
+  "repository": "https://github.com/seeliang/kickoff/tree/master/packages/webpack/config",
+  "author": "sihuiliang",
+  "license": "MIT",
+  "private": false
+}
