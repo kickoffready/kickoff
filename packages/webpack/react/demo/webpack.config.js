@@ -1,4 +1,4 @@
-const {config} = require('../src');
+const {config} = require('ko-webpack-react');
 const path = require('path');
 
 const options = {
