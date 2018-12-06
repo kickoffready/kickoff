@@ -1,0 +1,20 @@
+{
+  "peerDependencies": {
+    "webpack": "^4.27.1",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "name": "ko-webpack-vanilla",
+  "version": "1.0.4",
+  "description": "the base of webpack solution in kick off packages ",
+  "repository": "https://github.com/seeliang/kickoff/tree/master/packages/webpack/vanilla",
+  "main": "src/index.js",
+  "author": "shui liang",
+  "keywords": [
+    "webpack",
+    "compile"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
