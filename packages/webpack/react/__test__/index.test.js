@@ -16,7 +16,6 @@ describe('prod', () => {
       },
     }
     const build = prod(options);
-    console.log(devSet);
     expect(build.entry).toEqual(options.entry);
     expect(build.output.path).toEqual(path.join(__dirname + `../../../`, options.output.path));
   })
