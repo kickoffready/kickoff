@@ -1,3 +1,6 @@
-var k = x => y => (x + 3) * y;
+import React from 'react';
+import { render } from 'react-dom';
 
-console.log(k(6)(4));
+const Root = () => <p> how you doing </p>
+
+render(<Root />, document.getElementById('app'));
