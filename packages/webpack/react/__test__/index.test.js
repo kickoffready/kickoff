@@ -6,7 +6,8 @@ describe('prod', () => {
   it('shall take options', () => {
     const options = {
       entry: {
-        app: './assets/index.js',
+        app: 'assets/index.js',
+        page: 'assets/page.js',
       },
     
       output: {
@@ -16,7 +17,8 @@ describe('prod', () => {
       },
     }
     const build = prod(options);
-    expect(build.entry).toEqual(options.entry);
     expect(build.output.path).toEqual(path.join(__dirname + `../../../`, options.output.path));
+    expect(build.entry.page).toEqual(path.join(__dirname + `../../`, options.entry.page));
+    expect(build.entry.app).toEqual(path.join(__dirname + `../../`, options.entry.app));
   })
 })
