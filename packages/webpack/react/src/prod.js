@@ -1,36 +1,47 @@
-const base = require('./base');
-const defaultOptions = require('./default');
-const path = require('path')
+const path = require('path');
+const appPath = (location) => path.resolve(__dirname + '../../../' + location);
 
-const appPath = (location) => path.resolve(__dirname + '../../' + location);
-
-const prod = (options = defaultOptions) => {
-  console.log('\n' + 'OK, we will use default webpack function for prod \n'); 
-
-  const entrySet = (options) => {
-    const {entry} = options;
-    return Object.keys(entry).reduce((r, i) => ({ ...r, [i]: appPath(entry[i])}), {})
-  }
-  entrySet(options);
-
-  return Object.assign({}, base, options, {
-    entry: entrySet(options),
-    output: {
-      path: (path.join(__dirname + `../../../`, options.output.path)),
+const prod = (options) => {
+  const config = {
+    externals: {
+      react: 'React',
+      'react-dom': 'ReactDOM',
+    },
+    mode: 'production',
+    resolve: {
+      modules: [
+        'node_modules',
+      ],
     },
     devtool: 'nosources-source-map',
     module: {
       rules: [{
         test: /\.js$/,
-        exclude: appPath('/node_modules/'),
+        exclude: '/node_modules/',
         loader: 'babel-loader',
-        include: __dirname,
         query: {
           presets: ['env', 'react'],
         },
       }],
     },
-  })
+  };
+  if(!options) {
+    return config;
+  }
+  const {entry, output} = options;
+  if(entry) {
+    const entrySet = Object.keys(entry).reduce((r, i) => ({ ...r, [i]: appPath(entry[i])}), {});
+    config.entry = entrySet;
+  }
+
+  if(output) {
+    const {path} = output;
+    console.log(path);
+    config.output = {};
+    config.output.path = appPath(path);
+  }
+
+  return config; 
 }
 
 module.exports = prod;
