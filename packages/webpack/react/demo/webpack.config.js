@@ -1,6 +1,5 @@
-const {config} = require('ko-webpack-react');
-const path = require('path');
-
+const {prod} = require('ko-webpack-react');
+const util = require('util');
 const options = {
   entry: {
     app: './src/index.js',
@@ -10,7 +9,7 @@ const options = {
     path: ('/new/js'),
     publicPath: 'new/js',
     filename: '[name].js',
-  },
+  }
 };
 
-module.exports = config();
+module.exports = prod(options);
