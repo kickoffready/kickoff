@@ -2,8 +2,10 @@ const {prod} = require('../src');
 
 const path = require('path');
 
+const fullPath = string => path.join(__dirname + `../../../`, string);
+
 describe('prod', () => {
-  it('shall take options', () => {
+  it('shall transform options', () => {
     const options = {
       entry: {
         app: 'assets/index.js',
@@ -17,8 +19,8 @@ describe('prod', () => {
       },
     }
     const build = prod(options);
-    expect(build.output.path).toEqual(path.join(__dirname + `../../../`, options.output.path));
-    expect(build.entry.page).toEqual(path.join(__dirname + `../../`, options.entry.page));
-    expect(build.entry.app).toEqual(path.join(__dirname + `../../`, options.entry.app));
+    expect(build.output.path).toEqual( fullPath(options.output.path));
+    expect(build.entry.page).toEqual(fullPath(options.entry.page));
+    expect(build.entry.app).toEqual(fullPath(options.entry.app));
   })
 })
