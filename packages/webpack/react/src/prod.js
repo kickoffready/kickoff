@@ -1,5 +1,4 @@
-const path = require('path');
-const appPath = (location) => path.resolve(__dirname + '../../../' + location);
+const {appPath, absoluteEntry} = require('./helpers');
 
 const prod = (options) => {
   const config = {
@@ -30,13 +29,12 @@ const prod = (options) => {
   }
   const {entry, output} = options;
   if(entry) {
-    const entrySet = Object.keys(entry).reduce((r, i) => ({ ...r, [i]: appPath(entry[i])}), {});
+    const entrySet = absoluteEntry(entry);
     config.entry = entrySet;
   }
 
   if(output) {
     const {path} = output;
-    console.log(path);
     config.output = {};
     config.output.path = appPath(path);
   }
