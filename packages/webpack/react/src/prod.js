@@ -1,29 +1,30 @@
 const {appPath, absoluteEntry} = require('./helpers');
 
+const config = {
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
+  mode: 'production',
+  resolve: {
+    modules: [
+      'node_modules',
+    ],
+  },
+  devtool: 'nosources-source-map',
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: '/node_modules/',
+      loader: 'babel-loader',
+      query: {
+        presets: ['env', 'react'],
+      },
+    }],
+  },
+};
+
 const prod = (options) => {
-  const config = {
-    externals: {
-      react: 'React',
-      'react-dom': 'ReactDOM',
-    },
-    mode: 'production',
-    resolve: {
-      modules: [
-        'node_modules',
-      ],
-    },
-    devtool: 'nosources-source-map',
-    module: {
-      rules: [{
-        test: /\.js$/,
-        exclude: '/node_modules/',
-        loader: 'babel-loader',
-        query: {
-          presets: ['env', 'react'],
-        },
-      }],
-    },
-  };
   if(!options) {
     return config;
   }
