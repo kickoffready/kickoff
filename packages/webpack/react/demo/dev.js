@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path  = require('path');
 
-const appPath = (location) => path.resolve(__dirname, location);
+const appPath = (location) => path.resolve(__dirname + location);
 
 const absoluteEntry = entry => Object.keys(entry).reduce((r, i) => ({ ...r, [i]: appPath(entry[i])}), {});
 
@@ -52,10 +52,9 @@ const dev = (options) => {
   }
 
   if(output) {
-    const pathSet = output.path;
-    config.output = output;
-    config.output.path = path.resolve(__dirname + pathSet);
-    console.log(config.output.path);
+    const {path} = output;
+    config.output = {};
+    config.output.path = appPath(path);
   }
   return config;
 }

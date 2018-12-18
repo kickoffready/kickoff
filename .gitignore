@@ -14,3 +14,7 @@ server.bundle.js
 package
 lib
 dist
+
+packages/webpack/react/demo/no/ko/src/
+
+packages/webpack/react/demo/new/
