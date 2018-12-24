@@ -1,42 +1,41 @@
-const path = require('path');
-const appPath = (location) => path.resolve(__dirname + '../../../../' + location);
+const {appPath, absoluteEntry} = require('./helpers');
+
+const config = {
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
+  mode: 'production',
+  resolve: {
+    modules: [
+      'node_modules',
+    ],
+  },
+  devtool: 'nosources-source-map',
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: '/node_modules/',
+      loader: 'babel-loader',
+      query: {
+        presets: ['env', 'react'],
+      },
+    }],
+  },
+};
 
 const prod = (options) => {
-  const config = {
-    externals: {
-      react: 'React',
-      'react-dom': 'ReactDOM',
-    },
-    mode: 'production',
-    resolve: {
-      modules: [
-        'node_modules',
-      ],
-    },
-    devtool: 'nosources-source-map',
-    module: {
-      rules: [{
-        test: /\.js$/,
-        exclude: '/node_modules/',
-        loader: 'babel-loader',
-        query: {
-          presets: ['env', 'react'],
-        },
-      }],
-    },
-  };
   if(!options) {
     return config;
   }
   const {entry, output} = options;
   if(entry) {
-    const entrySet = Object.keys(entry).reduce((r, i) => ({ ...r, [i]: appPath(entry[i])}), {});
+    const entrySet = absoluteEntry(entry);
     config.entry = entrySet;
   }
 
   if(output) {
     const {path} = output;
-    console.log(path);
     config.output = {};
     config.output.path = appPath(path);
   }
@@ -44,4 +43,4 @@ const prod = (options) => {
   return config; 
 }
 
-module.exports = prod; 
+module.exports = prod;
