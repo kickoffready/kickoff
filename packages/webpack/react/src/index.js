@@ -1,16 +1,20 @@
+
+
 'use strict';
 const dev = require('./dev');
 const prod = require('./prod');
-const helpers = require('./helpers');
 const config = options => {
   let settings;
-  const set =  helpers.optionsFallback(options);
   if(process.env.NODE_ENV === 'prod') {
-    settings = prod(set);
+    console.log('building bundle for production')
+    settings = prod(options);
   }
   
   if(process.env.NODE_ENV === 'dev') {
-    settings = dev(set);
+    console.log('loading dev server')
+    console.log('check your bundle at http://localhost:8080/webpack-dev-server')
+    console.log( 'for hmr you will need -- if (module.hot) module.hot.accept()')
+    settings = dev(options);
   }
   
   return settings;

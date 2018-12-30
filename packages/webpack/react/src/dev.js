@@ -1,9 +1,6 @@
 const webpack = require('webpack');
 const path  = require('path');
-
-const appPath = (location) => path.resolve(__dirname + location);
-
-const absoluteEntry = entry => Object.keys(entry).reduce((r, i) => ({ ...r, [i]: appPath(entry[i])}), {});
+const {absoluteEntry, appPath} = require('./helpers');
 
 const config = {
   externals: {
@@ -20,7 +17,6 @@ const config = {
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel-loader',
-      include: __dirname,
       query: {
         presets: ['env', 'react', 'react-hmre'],
       },
@@ -28,9 +24,10 @@ const config = {
   },
   mode: "development",
   devServer: {
-     hot: true,
-     progress: true,
-     inline: true,
+    contentBase: appPath('/'),
+    hot: true,
+    progress: true,
+    inline: true,
    },
   plugins: [
     new webpack.SourceMapDevToolPlugin({
@@ -53,7 +50,7 @@ const dev = (options) => {
 
   if(output) {
     const {path} = output;
-    config.output = {};
+    config.output = output;
     config.output.path = appPath(path);
   }
   return config;

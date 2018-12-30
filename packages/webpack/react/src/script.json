@@ -1,6 +1,0 @@
-{
-  "scripts": {
-    "dev-env": "NODE_ENV=dev yarn webpack-dev-server --https",
-    "start": "yarn dev-env"
-  }
-}
