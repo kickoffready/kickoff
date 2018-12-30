@@ -1,6 +1,6 @@
 const {config} = require('ko-webpack-react');
-const util = require('util');
-const path  = require('path');
+// const util = require('util');
+// const path  = require('path');
 
 // const {config} =  require('./no/ko/src/');
 
@@ -20,3 +20,4 @@ const options = {
 // console.log(util.inspect(config(options), {showHidden: false, depth: null}))
 
 module.exports = config(options);
+// module.exports = config();
