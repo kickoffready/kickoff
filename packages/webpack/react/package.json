@@ -12,7 +12,7 @@
     "webpack-dev-server": "^3.1.9"
   },
   "name": "ko-webpack-react",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "the webpack react solution in kick off packages ",
   "repository": "https://github.com/seeliang/kickoff/tree/master/packages/webpack/vanilla",
   "main": "src/index.js",
