@@ -1,9 +1,6 @@
 const webpack = require('webpack');
 const path  = require('path');
-
-const appPath = (location) => path.resolve(__dirname + '../../../../' + location); // need a helper
-
-const absoluteEntry = entry => Object.keys(entry).reduce((r, i) => ({ ...r, [i]: appPath(entry[i])}), {});
+const {absoluteEntry, appPath} = require('./helpers');
 
 const config = {
   externals: {
@@ -54,7 +51,6 @@ const dev = (options) => {
   if(output) {
     const {path} = output;
     config.output = output;
-    console.log('check your bundle at http://localhost:8080/webpack-dev-server')
     config.output.path = appPath(path);
   }
   return config;
