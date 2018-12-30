@@ -1,8 +1,8 @@
-// const {prod} = require('ko-webpack-react');
+const {config} = require('ko-webpack-react');
 const util = require('util');
 const path  = require('path');
 
-const {config} =  require('./no/ko/src/');
+// const {config} =  require('./no/ko/src/');
 
 const options = {
   entry: {
