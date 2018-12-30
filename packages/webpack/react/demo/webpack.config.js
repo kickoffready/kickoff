@@ -2,10 +2,7 @@
 const util = require('util');
 const path  = require('path');
 
-const appPath = (location) => path.resolve(__dirname + location); // need a helper
-
-//const dev =  require('./no/ko/src/dev');
-const dev =require('./dev');
+const {config} =  require('./no/ko/src/');
 
 const options = {
   entry: {
@@ -14,12 +11,12 @@ const options = {
   },
 
   output: {
-    path: ('/dist/js'),
-    publicPath: '/dist/js/',
+    path: ('/assets/js'),
+    publicPath: '/assets/js/',
     filename: '[name].js',
   }
 };
 
-console.log(util.inspect(dev(options), {showHidden: false, depth: null}))
+// console.log(util.inspect(config(options), {showHidden: false, depth: null}))
 
-module.exports = dev(options);
+module.exports = config(options);
