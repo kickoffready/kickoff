@@ -14,7 +14,7 @@
   "name": "ko-webpack-react",
   "version": "1.0.2",
   "description": "the webpack react solution in kick off packages ",
-  "repository": "https://github.com/seeliang/kickoff/tree/master/packages/webpack/vanilla",
+  "repository": "https://github.com/seeliang/kickoff/tree/master/packages/webpack/react",
   "main": "src/index.js",
   "author": "shui liang",
   "keywords": [
