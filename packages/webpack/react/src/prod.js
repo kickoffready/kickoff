@@ -37,6 +37,7 @@ const prod = (options) => {
   if(output) {
     const {path} = output;
     config.output = {};
+    config.output.filename = output.filename;
     config.output.path = appPath(path);
   }
 
