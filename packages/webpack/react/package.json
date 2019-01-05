@@ -16,7 +16,7 @@
   "description": "the webpack react solution in kick off packages ",
   "repository": "https://github.com/seeliang/kickoff/tree/master/packages/webpack/react",
   "main": "src/index.js",
-  "author": "shui liang",
+  "author": "sihui liang",
   "keywords": [
     "webpack",
     "compile"
