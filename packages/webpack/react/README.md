@@ -2,6 +2,11 @@
 
 webpack setting package for react compile  
 
+## Release
+
+### 1.1
+add support for webpack-stream
+
 ## Usage
 
 import settings for your production build and dev environment set in your `webpack.config.js` 
