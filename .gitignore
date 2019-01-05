@@ -14,3 +14,5 @@ server.bundle.js
 package
 lib
 dist
+
+packages/webpack/react/demo/assets
