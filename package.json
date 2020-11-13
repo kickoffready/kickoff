@@ -1,5 +1,5 @@
 {
-  "name": "kickoff",
+  "name": "kick-off",
   "description": "helpers to kickoff web project",
   "private": true,
   "devDependencies": {
