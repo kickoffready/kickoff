@@ -1,13 +1,8 @@
 {
   "name": "kickoff",
-  "version": "0.0.3",
-  "description": "inital web project",
-  "main": "doesnothaveindex.js",
+  "description": "helpers to kickoff web project",
   "devDependencies": {
     "lerna": "^3.22.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,7 +12,7 @@
     "kickoff"
   ],
   "author": "sihui",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/seeliang/kickoff/issues"
   },
