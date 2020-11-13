@@ -1,6 +1,17 @@
 {
   "packages": [
-    "packages/*"
+    "packages/**"
   ],
+  "npmClient": "yarn",
+  "command": {
+    "publish": {
+      "message": "chore(release): publish",
+      "registry": "https://npm.pkg.github.com"
+    },
+    "create": {
+      "registry": "https://npm.pkg.github.com",
+      "yes": true
+    }
+  },
   "version": "independent"
 }
