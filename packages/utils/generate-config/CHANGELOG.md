@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/seeliang/kickoff/compare/@kickoffready/generate-config@1.1.2...@kickoffready/generate-config@1.1.3) (2020-11-23)
+
+
+### Bug Fixes
+
+* add doc ([d189924](https://github.com/seeliang/kickoff/commit/d1899247272ca2016ab82c15c164618962c855fc))
+
+
+
+
+
 ## 1.1.2 (2020-11-23)
 
 
