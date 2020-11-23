@@ -1,11 +1,19 @@
 # `@kickoffready/generate-config`
 
-> TODO: description
+> join configuration object for things like webpack and eslint
 
 ## Usage
 
 ```
-const generateConfig = require('@kickoffready/generate-config');
+const { GenerateConfig } = require('@infomediacode/generate-config');
 
-// TODO: DEMONSTRATE API
+// eslint sample
+const set = new GenerateConfig();
+const config = set
+  .addConfig(ts)
+  .addConfig(jasmine)
+  .addConfig(rx)
+  .setup;
+
+module.exports = config;
 ```
