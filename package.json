@@ -3,6 +3,7 @@
   "description": "helpers to kickoff web project",
   "private": true,
   "devDependencies": {
+    "jest": "^26.6.3",
     "lerna": "^3.21.0"
   },
   "workspaces": [
