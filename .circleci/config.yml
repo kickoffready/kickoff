@@ -1,0 +1,42 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  unitTest:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: 
+                name: run unit test
+                command: yarn && yarn test
+  release:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: 
+                name: add github info
+                command: |
+                  git config user.email hi@sihuiliang.com
+                  git config user.name seeliang
+            - run: 
+                name: add registry info
+                command: |
+                  npm set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+            - run: 
+                name: release package
+                command: yarn && yarn release
+workflows:
+    release-package:
+      jobs:
+        - unitTest
+        - release
+            # filters:
+            #   branches:
+            #     only:
+            #       - master
