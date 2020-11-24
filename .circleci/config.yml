@@ -23,7 +23,7 @@ jobs:
                 name: add github info
                 command: |
                   git config user.email hi@sihuiliang.com
-                  git config user.name cirecleCi
+                  git config user.name seeliang
             - run: 
                 name: add registry info
                 command: |
