@@ -34,11 +34,11 @@ jobs:
 workflows:
     release-package:
       jobs:
-        #- unitTest
-        - release
-            # filters:
-            #   branches:
-            #     only:
-            #       - master
-            # requires:
-            # - unitTest
+        - unitTest
+        - release:
+            filters:
+              branches:
+                only:
+                  - master
+            requires:
+            - unitTest
