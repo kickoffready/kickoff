@@ -17,4 +17,3 @@ const config = set
 
 module.exports = config;
 ```
-
