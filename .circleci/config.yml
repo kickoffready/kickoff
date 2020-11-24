@@ -23,7 +23,7 @@ jobs:
                 name: add github info
                 command: |
                   git config user.email hi@sihuiliang.com
-                  git config user.name seeliang
+                  git config user.name cirecleCi
             - run: 
                 name: add registry info
                 command: |
@@ -35,8 +35,8 @@ workflows:
     release-package:
       jobs:
         - unitTest
-        - release
-            # filters:
-            #   branches:
-            #     only:
-            #       - master
+        - release:
+            filters:
+              branches:
+                only:
+                  - master
