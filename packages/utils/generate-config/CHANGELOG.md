@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/kickoffready/kickoff/compare/@kickoffready/generate-config@1.1.7...@kickoffready/generate-config@1.1.8) (2020-11-24)
+
+
+### Bug Fixes
+
+* trigger release ([19557b7](https://github.com/kickoffready/kickoff/commit/19557b7bc4c76ddb6b6a5c208ece28d565672220))
+
+
+
+
+
 ## [1.1.7](https://github.com/kickoffready/kickoff/compare/@kickoffready/generate-config@1.1.6...@kickoffready/generate-config@1.1.7) (2020-11-24)
 
 
