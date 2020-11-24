@@ -18,13 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seeliang/kickoff.git"
+    "url": "git+https://github.com/kickoffready/kickoff.git"
   },
   "scripts": {
     "test": "yarn jest"
   },
   "bugs": {
-    "url": "https://github.com/seeliang/kickoff/issues"
+    "url": "https://github.com/kickoffready/kickoff/issues"
   },
-  "homepage": "https://github.com/seeliang/kickoff#readme"
+  "homepage": "https://github.com/kickoffready/kickoff#readme"
 }
