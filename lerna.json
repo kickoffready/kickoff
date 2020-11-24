@@ -6,10 +6,10 @@
   "command": {
     "publish": {
       "message": "chore(release): publish",
-      "registry": "https://npm.pkg.github.com"
+      "registry": "https://registry.npmjs.org/"
     },
     "create": {
-      "registry": "https://npm.pkg.github.com",
+      "registry": "https://registry.npmjs.org/",
       "yes": true
     }
   },
