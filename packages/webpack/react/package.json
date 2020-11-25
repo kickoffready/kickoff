@@ -22,7 +22,7 @@
     "url": "git+https://github.com/kickoffready/kickoff.git"
   },
   "scripts": {
-    "test": "yarn webpack -c webpack.configJS.js && exit 0"
+    "test": "yarn webpack -c webpack.configTS.js && yarn webpack -c webpack.configJS.js && exit 0"
   },
   "bugs": {
     "url": "https://github.com/kickoffready/kickoff/issues"
