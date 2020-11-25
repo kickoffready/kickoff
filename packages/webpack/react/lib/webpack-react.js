@@ -68,11 +68,10 @@ const devSet = ({port = 8888, dist = 'dist/'}) => ({
     },
 })
 
-const fileConfig = ({entry = './src/index', dist = 'dist/', outputFile = 'bundle.js'}) => ({
+const fileConfig = ({entry = './src/index', dist = 'dist/'}) => ({
     entry,
     output: {
         path: path.resolve(__dirname, dist),
-        filename: outputFile,
     },
 })
 
