@@ -1,0 +1,51 @@
+{
+  "name": "@kickoffready/webpack-react",
+  "version": "1.0.0",
+  "description": "webpack config for init react",
+  "keywords": [],
+  "author": "seeliang <hi@sihuiliang.com>",
+  "homepage": "https://github.com/kickoffready/kickoff/tree/master/packages/webpack-react#readme",
+  "license": "MIT",
+  "main": "lib/webpack-react.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kickoffready/kickoff.git"
+  },
+  "scripts": {
+    "build:js": "yarn webpack -c webpack.configJS.js",
+    "build:ts": "yarn webpack",
+    "dev:ts": "yarn webpack serve",
+    "test": "yarn build:ts && yarn build:js && exit 0"
+  },
+  "bugs": {
+    "url": "https://github.com/kickoffready/kickoff/issues"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-react": "^7.12.5",
+    "@babel/preset-typescript": "^7.12.1",
+    "babel-loader": "^8.2.1",
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-react": "^7.12.5",
+    "@babel/preset-typescript": "^7.12.1",
+    "babel-loader": "^8.2.1",
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
