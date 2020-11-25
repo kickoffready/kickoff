@@ -24,6 +24,7 @@
   "scripts": {
     "build:js": "yarn webpack -c webpack.configJS.js",
     "build:ts": "yarn webpack",
+    "dev:ts": "yarn webpack serve",
     "test": "yarn build:ts && yarn build:js && exit 0"
   },
   "bugs": {
