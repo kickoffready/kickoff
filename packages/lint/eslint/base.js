@@ -1,5 +1,7 @@
 const { GenerateConfig } = require('@kickoffready/generate-config');
-const { base } = require('../lib/lint');
+const { eslint } = require('../lib/lint');
+
+const { base } = eslint;
 
 const set = new GenerateConfig();
 const config = set
