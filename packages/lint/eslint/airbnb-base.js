@@ -1,9 +1,9 @@
 const { GenerateConfig } = require('@kickoffready/generate-config');
-const airbnb = require('../lib/eslint/airbnb-base.set');
+const {airbnbBase}  = require('../lib/lint');
 
 const set = new GenerateConfig();
 const config = set
-  .addConfig(airbnb)
+  .addConfig(airbnbBase)
   .setup;
 
 module.exports = config;
