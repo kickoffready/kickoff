@@ -1,0 +1,30 @@
+{
+  "name": "@kickoffready/lint",
+  "version": "1.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "keywords": [],
+  "author": "sihui-mr <sihui.liang@medirecords.com>",
+  "homepage": "https://github.com/kickoffready/kickoff/tree/master/packages/lint#readme",
+  "license": "MIT",
+  "main": "lib/lint.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "yarn eslint:base",
+    "eslint:base": "yarn eslint -c ./eslint/base.js ./__tests__/*.js"
+  },
+  "devDependencies": {
+    "eslint": "7",
+  },
+  "peerDependencies": {
+    "eslint": "7"
+  },
+  "dependencies": {
+    "@kickoffready/generate-config": "^1.2.1"
+  }
+}
