@@ -16,3 +16,9 @@ yarn add eslint@7 @kickoffready/generate-config -D
 ```
 yarn add eslint@7 @kickoffready/generate-config eslint-config-airbnb@18 eslint-plugin-import@2 -D
 ```
+
+### ts
+
+```
+yarn add eslint@7 @kickoffready/generate-config typescript@4 @typescript-eslint/eslint-plugin@5 @typescript-eslint/parser@5 -D
+```
