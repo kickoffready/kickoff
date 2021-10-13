@@ -27,6 +27,7 @@ jobs:
             - run: 
                 name: add registry info
                 command: |
+                  npm set always-auth true
                   npm set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
             - run: 
                 name: release package
