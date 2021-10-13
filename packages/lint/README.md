@@ -22,3 +22,11 @@ yarn add eslint@7 @kickoffready/generate-config eslint-config-airbnb@18 eslint-p
 ```
 yarn add eslint@7 @kickoffready/generate-config typescript@4 @typescript-eslint/eslint-plugin@5 @typescript-eslint/parser@5 -D
 ```
+
+### jest
+
+* require base / es6 
+
+```
+yarn add eslint@7 @kickoffready/generate-config eslint-plugin-jest@25 -D
+```
