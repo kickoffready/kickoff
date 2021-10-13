@@ -1,10 +1,9 @@
-
 const { GenerateConfig } = require('@kickoffready/generate-config');
 const { eslint } = require('../lib/lint');
 
 const { ts, airbnbBase } = eslint;
 
-const settings = ts('./tsconfig.json')
+const settings = ts('./tsconfig.json');
 
 const set = new GenerateConfig();
 const config = set
@@ -12,6 +11,6 @@ const config = set
   .addConfig(settings)
   .setup;
 
-  console.log(config)
+console.log(config);
 
 module.exports = config;
