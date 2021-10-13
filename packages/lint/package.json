@@ -15,15 +15,19 @@
     "lib"
   ],
   "scripts": {
-    "test": "yarn eslint:base && yarn eslint:airbnb-base",
+    "test": "yarn eslint:base && yarn eslint:airbnb-base && yarn eslint:ts",
     "lint": "yarn eslint -c ./eslint/airbnb-base.js ./**/*.js",
     "eslint:base": "yarn eslint -c ./eslint/base.js ./__tests__/lint.js",
-    "eslint:airbnb-base": "yarn eslint -c ./eslint/airbnb-base.js ./__tests__/lint.js"
+    "eslint:airbnb-base": "yarn eslint -c ./eslint/airbnb-base.js ./__tests__/lint.js",
+    "eslint:ts": "yarn eslint -c ./eslint/ts.js ./__tests__/ts.ts"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
     "eslint": "7",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.24.2"
+    "eslint-plugin-import": "^2.24.2",
+    "typescript": "^4.4.4"
   },
   "peerDependencies": {
     "eslint": "7",
