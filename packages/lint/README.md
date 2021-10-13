@@ -1,8 +1,8 @@
 # `lint`
 
-the basic lint set for eslint 
+the common lint set for eslint & stylelint
 
-## Dev deps
+## eslint
 
 ### base 
 
