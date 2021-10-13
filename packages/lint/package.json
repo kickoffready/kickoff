@@ -18,7 +18,7 @@
     "test": "yarn lint && yarn eslint:base && yarn eslint:airbnb-base && yarn eslint:ts && yarn eslint:jest",
     "lint": "yarn eslint -c ./eslint/airbnb-base.js ./lib/*.js",
     "eslint:base": "yarn eslint -c ./eslint/base.js ./__tests__/lint.js",
-    "eslint:airbnb-base": "yarn eslint -c ./eslint/airbnb-base.js ./__tests__/lint.js",
+    "eslint:airbnb-base": "yarn eslint -c ./eslint/airbnb-base.js ./eslint/*.js",
     "eslint:ts": "yarn eslint -c ./eslint/ts.js ./__tests__/ts.ts",
     "eslint:jest": "yarn eslint -c ./eslint/jest.js ./__tests__/jest.test.js"
   },
