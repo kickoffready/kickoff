@@ -30,3 +30,11 @@ yarn add eslint@7 @kickoffready/generate-config typescript@4 @typescript-eslint/
 ```
 yarn add eslint@7 @kickoffready/generate-config eslint-plugin-jest@25 -D
 ```
+
+## Stylelint
+
+### standard
+
+```
+yarn add stylelint@13 stylelint-config-standard@22 -D
+```
