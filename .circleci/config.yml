@@ -27,13 +27,12 @@ jobs:
             - run: 
                 name: add registry info
                 command: |
-                  npm set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-                  npm set //registry.npmjs.org/:username seeliang
-                  npm set //registry.npmjs.org/:email: hi@sihuiliang.com
-                  npm whoami
-            # - run: 
-            #     name: release package
-            #     command: yarn && yarn release
+                  npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+                  npm config set //registry.npmjs.org/:username seeliang
+                  npm config set //registry.npmjs.org/:email: hi@sihuiliang.com
+            - run: 
+                name: release package
+                command: yarn && yarn prerelease
 workflows:
     release-package:
       jobs:
