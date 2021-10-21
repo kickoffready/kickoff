@@ -13,7 +13,7 @@ const config = set
   .addConfig(ts)
   .addConfig(jasmine)
   .addConfig(rx)
-  .setup;
+  .setup;  
 
 module.exports = config;
 ```
