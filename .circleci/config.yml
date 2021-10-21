@@ -30,10 +30,10 @@ jobs:
                   npm set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
                   npm set //registry.npmjs.org/:username seeliang
                   npm set //registry.npmjs.org/:email: hi@sihuiliang.com
-                  npm set always-auth true
-            - run: 
-                name: release package
-                command: yarn && yarn release
+                  npm whoami
+            # - run: 
+            #     name: release package
+            #     command: yarn && yarn release
 workflows:
     release-package:
       jobs:
