@@ -28,17 +28,19 @@ jobs:
                 name: add registry info
                 command: |
                   npm set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+                  npm set //registry.npmjs.org/:username seeliang
+                  npm set //registry.npmjs.org/:email: hi@sihuiliang.com
             - run: 
                 name: release package
                 command: yarn && yarn release
 workflows:
     release-package:
       jobs:
-        - unitTest
-        - release:
-            filters:
-              branches:
-                only:
-                  - master
-            requires:
-            - unitTest
+        # - unitTest
+        - release
+            # filters:
+            #   branches:
+            #     only:
+            #       - master
+            # requires:
+            # - unitTest
