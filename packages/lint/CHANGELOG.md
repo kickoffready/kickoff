@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://git-sl/kickoffready/kickoff/compare/@kickoffready/lint@1.1.5...@kickoffready/lint@1.1.6) (2021-10-21)
+
+
+### Bug Fixes
+
+* test ([c734ce2](https://git-sl/kickoffready/kickoff/commits/c734ce2cd094042acf2efb6554e6295f70540602))
+
+
+
+
+
 ## [1.1.5](https://git-sl/kickoffready/kickoff/compare/@kickoffready/lint@1.1.4...@kickoffready/lint@1.1.5) (2021-10-21)
 
 
