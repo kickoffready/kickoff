@@ -26,21 +26,18 @@ jobs:
                   git config user.name seeliang
             - run: 
                 name: add registry info
-                command: |
-                  npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-                  npm config set //registry.npmjs.org/:username seeliang
-                  npm config set //registry.npmjs.org/:email: hi@sihuiliang.com
+                command: bash bash/npm-set.sh
             - run: 
                 name: release package
-                command: yarn && yarn prerelease
+                command: yarn && yarn release
 workflows:
     release-package:
       jobs:
-        # - unitTest
-        - release
-            # filters:
-            #   branches:
-            #     only:
-            #       - master
-            # requires:
-            # - unitTest
+        - unitTest
+        - release:
+            filters:
+              branches:
+                only:
+                  - master
+            requires:
+            - unitTest
