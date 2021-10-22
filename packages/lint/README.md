@@ -2,7 +2,7 @@
 
 the common lint set for eslint & stylelint
 
-## eslint 
+## eslint
 
 ### base 
 
