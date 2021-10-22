@@ -3,7 +3,7 @@ const addArraySet = ({ config, extendConfig, key }) => ({
   [key]: [
     ...config[key],
     ...extendConfig[key],
-  ], 
+  ],
 });
 
 const addObjectSet = ({ config, extendConfig, key }) => ({
