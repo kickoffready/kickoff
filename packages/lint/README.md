@@ -42,6 +42,6 @@ yarn add stylelint@13 stylelint-config-standard@22 -D
 ### rules
 if need sass 
 
-``` 
+```
 yarn add stylelint@13 stylelint-config-sass-guidelines@8 -D
 ```
