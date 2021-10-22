@@ -26,8 +26,7 @@ jobs:
                   git config user.name seeliang
             - run: 
                 name: add registry info
-                command: |
-                  npm set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+                command: bash bash/npm-set.sh
             - run: 
                 name: release package
                 command: yarn && yarn release
