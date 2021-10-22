@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4-alpha.1](https://github.com/kickoffready/kickoff/compare/@kickoffready/generate-config@1.2.4-alpha.0...@kickoffready/generate-config@1.2.4-alpha.1) (2021-10-22)
+
+
+### Bug Fixes
+
+* test ([c72771f](https://github.com/kickoffready/kickoff/commit/c72771fe3274a940041a1fde0efe993770019919))
+
+
+
+
+
 ## [1.2.4-alpha.0](https://github.com/kickoffready/kickoff/compare/@kickoffready/generate-config@1.2.3...@kickoffready/generate-config@1.2.4-alpha.0) (2021-10-22)
 
 
