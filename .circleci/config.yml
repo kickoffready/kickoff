@@ -29,15 +29,15 @@ jobs:
                 command: bash bash/npm-set.sh
             - run: 
                 name: release package
-                command: yarn && yarn release
+                command: yarn && yarn prerelease
 workflows:
     release-package:
       jobs:
-        - unitTest
-        - release:
-            filters:
-              branches:
-                only:
-                  - master
-            requires:
-            - unitTest
+        # - unitTest
+        - release
+            # filters:
+            #   branches:
+            #     only:
+            #       - master
+            # requires:
+            # - unitTest
