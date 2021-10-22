@@ -10,7 +10,7 @@
     "packages/**"
   ],
   "scripts": {
-    "prerelease": "yarn lerna publish --conventional-prerelease --no-verify-access --conventional-commits --create-release github --yes",
+    "release:pre": "yarn lerna publish --conventional-prerelease --no-verify-access --conventional-commits --create-release github --yes",
     "release": "yarn lerna publish --no-verify-access --conventional-commits --create-release github --yes",
     "test": "yarn lerna run test --since origin/master",
     "generate": "lerna create"

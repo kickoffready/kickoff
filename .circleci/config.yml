@@ -29,7 +29,7 @@ jobs:
                 command: bash bash/npm-set.sh
             - run: 
                 name: release package
-                command: yarn && yarn prerelease
+                command: yarn && yarn release:pre
 workflows:
     release-package:
       jobs:
