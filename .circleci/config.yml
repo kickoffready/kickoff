@@ -32,7 +32,7 @@ jobs:
                 command: | 
                   yarn 
                   cd packages/lint
-                  npm publish --tag next
+                  npm publish --access public --tag next 
 workflows:
     release-package:
       jobs:
