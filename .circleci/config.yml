@@ -29,7 +29,10 @@ jobs:
                 command: bash bash/npm-set.sh
             - run: 
                 name: release package
-                command: yarn && yarn release:pre
+                command: | 
+                  yarn 
+                  cd packages/lint
+                  yarn publish --tag next
 workflows:
     release-package:
       jobs:
