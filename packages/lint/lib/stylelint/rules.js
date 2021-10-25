@@ -10,7 +10,6 @@ const smacssBem = {
   rules: {
     ...flatStyling.rules,
     'selector-nested-pattern': '(^&(::|:|.is-|.has-|__|-)?[a-z0-9-]*[a-z0-9]$)|^&:not',
-
   },
 };
 
