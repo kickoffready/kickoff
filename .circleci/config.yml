@@ -31,8 +31,7 @@ jobs:
                 name: release package
                 command: | 
                   yarn 
-                  cd packages/lint
-                  npm publish --access public --tag next 
+                  yarn release
 workflows:
     release-package:
       jobs:
