@@ -1,11 +1,12 @@
 {
   "name": "@kickoffready/lint",
-  "version": "1.1.8-alpha.7",
-  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "version": "1.1.8-alpha.17",
+  "description": "the package that helps your setup your lint with eslint and style lint",
   "keywords": [
     "eslint",
     "stylelint",
-    "airbnb"
+    "airbnb",
+    "jest"
   ],
   "author": "sihui liang",
   "homepage": "https://github.com/kickoffready/kickoff/tree/master/packages/lint#readme",
@@ -53,6 +54,6 @@
     "stylelint-config-standard": "^22.0.0"
   },
   "dependencies": {
-    "@kickoffready/generate-config": "^1.2.4-alpha.2"
+    "@kickoffready/generate-config": "^1.2.4-alpha.3"
   }
 }

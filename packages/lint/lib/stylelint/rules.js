@@ -10,7 +10,6 @@ const smacssBem = {
   rules: {
     ...flatStyling.rules,
     'selector-nested-pattern': '(^&(::|:|.is-|.has-|__|-)?[a-z0-9-]*[a-z0-9]$)|^&:not',
-
   },
 };
 
@@ -25,7 +24,7 @@ const designSystem = {
 
 const designSystemCSS = {
   rules: {
-    ...designSystem.rules,
+    ...designSystem.rules, 
     'selector-class-pattern': '^([o,a,p,m,i]|is|has|__)-?[a-z0-9-_]*[a-z0-9]$',
   },
 };

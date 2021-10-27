@@ -3,13 +3,92 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.1.8-alpha.7](https://github.com/kickoffready/kickoff/compare/@kickoffready/lint@1.1.8-alpha.6...@kickoffready/lint@1.1.8-alpha.7) (2021-10-22)
+## [1.1.8-alpha.17](https://github.com/kickoffready/kickoff/compare/@kickoffready/lint@1.1.8-alpha.16...@kickoffready/lint@1.1.8-alpha.17) (2021-10-27)
 
 
 ### Bug Fixes
 
-* add keyword ([1f38ffa](https://github.com/kickoffready/kickoff/commit/1f38ffa9e36f2a4d2d41ac0dc455ef8984ed958d))
-* reset ([450dd91](https://github.com/kickoffready/kickoff/commit/450dd91be1565d8574c13a8f52d6b4c4457d5951))
+* e ([7144381](https://github.com/kickoffready/kickoff/commit/7144381e0f7b1647a95b5ff34e5ec9f0cdd5a206))
+
+
+
+
+
+## [1.1.8-alpha.16](https://github.com/kickoffready/kickoff/compare/@kickoffready/lint@1.1.8-alpha.15...@kickoffready/lint@1.1.8-alpha.16) (2021-10-27)
+
+
+### Bug Fixes
+
+* test ([95beeb5](https://github.com/kickoffready/kickoff/commit/95beeb5932590cee19368cd2aa0c7f56651d353d))
+
+
+
+
+
+## [1.1.8-alpha.15](https://git-sl/kickoffready/kickoff/compare/@kickoffready/lint@1.1.8-alpha.14...@kickoffready/lint@1.1.8-alpha.15) (2021-10-25)
+
+
+### Bug Fixes
+
+* try ([11e5875](https://git-sl/kickoffready/kickoff/commits/11e5875ffed0a43885ee59ce670e988f5d611c3b))
+
+
+
+
+
+## [1.1.8-alpha.14](https://github.com/kickoffready/kickoff/compare/@kickoffready/lint@1.1.8-alpha.12...@kickoffready/lint@1.1.8-alpha.14) (2021-10-25)
+
+
+### Bug Fixes
+
+* release test ([e357244](https://github.com/kickoffready/kickoff/commit/e357244b4f59c2ecd70b5ae33a1beb6fbfe44518))
+
+
+
+
+
+## [1.1.8-alpha.12](https://git-sl/kickoffready/kickoff/compare/@kickoffready/lint@1.1.8-alpha.9...@kickoffready/lint@1.1.8-alpha.12) (2021-10-25)
+
+
+### Bug Fixes
+
+* try release ([8ec36fa](https://git-sl/kickoffready/kickoff/commits/8ec36fa1b27dd1f3c8499b54a6690013289bd9e2))
+
+
+
+
+
+## [1.1.8-alpha.9](https://github.com/kickoffready/kickoff/compare/@kickoffready/lint@1.1.8-alpha.8...@kickoffready/lint@1.1.8-alpha.9) (2021-10-22)
+
+
+### Bug Fixes
+
+* test ci ([517b5a2](https://github.com/kickoffready/kickoff/commit/517b5a281989f24e43820dc62a15076dc726706f))
+
+
+
+
+
+## [1.1.8-alpha.8](https://git-sl/kickoffready/kickoff/compare/@kickoffready/lint@1.1.8-alpha.7...@kickoffready/lint@1.1.8-alpha.8) (2021-10-22)
+
+
+### Bug Fixes
+
+* doc ([9e8f4b2](https://git-sl/kickoffready/kickoff/commits/9e8f4b2b5e906ae02c14f324c02f916e720c959a))
+* test ([c979a28](https://git-sl/kickoffready/kickoff/commits/c979a28b29bd76c115fd1b3c918cf296a5b90218))
+
+
+
+
+
+## [1.1.8-alpha.7](https://git-sl/kickoffready/kickoff/compare/@kickoffready/lint@1.1.8-alpha.6...@kickoffready/lint@1.1.8-alpha.7) (2021-10-22)
+
+
+### Bug Fixes
+
+* add keyword ([1f38ffa](https://git-sl/kickoffready/kickoff/commits/1f38ffa9e36f2a4d2d41ac0dc455ef8984ed958d))
+* doc ([9e8f4b2](https://git-sl/kickoffready/kickoff/commits/9e8f4b2b5e906ae02c14f324c02f916e720c959a))
+* reset ([450dd91](https://git-sl/kickoffready/kickoff/commits/450dd91be1565d8574c13a8f52d6b4c4457d5951))
 
 
 
