@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8-alpha.17](https://github.com/kickoffready/kickoff/compare/@kickoffready/lint@1.1.8-alpha.16...@kickoffready/lint@1.1.8-alpha.17) (2021-10-27)
+
+
+### Bug Fixes
+
+* e ([7144381](https://github.com/kickoffready/kickoff/commit/7144381e0f7b1647a95b5ff34e5ec9f0cdd5a206))
+
+
+
+
+
 ## [1.1.8-alpha.16](https://github.com/kickoffready/kickoff/compare/@kickoffready/lint@1.1.8-alpha.15...@kickoffready/lint@1.1.8-alpha.16) (2021-10-27)
 
 
