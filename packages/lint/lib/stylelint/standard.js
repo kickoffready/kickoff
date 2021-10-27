@@ -2,4 +2,4 @@ const standard = {
   extends: 'stylelint-config-standard',
 };
 
-module.exports = standard
+module.exports = standard;

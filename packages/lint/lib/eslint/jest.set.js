@@ -5,5 +5,5 @@ module.exports = {
   },
   globals: {
     spyOn: 'readonly',
-  }
+  },
 };

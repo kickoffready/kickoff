@@ -4,7 +4,7 @@ const flatStyling = {
   'selector-pseudo-class-allowed-list': ['hover', 'not', 'focus', 'active'],
   'selector-pseudo-element-allowed-list': ['before', 'after', 'placeholder'],
   'selector-max-specificity': '0,3,0',
-}
+};
 
 const smacssBem = {
   rules: {
@@ -24,7 +24,7 @@ const designSystem = {
 
 const designSystemCSS = {
   rules: {
-    ...designSystem.rules, 
+    ...designSystem.rules,
     'selector-class-pattern': '^([o,a,p,m,i]|is|has|__)-?[a-z0-9-_]*[a-z0-9]$',
   },
 };

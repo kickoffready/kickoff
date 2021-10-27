@@ -1,4 +1,4 @@
-module.exports = pathToTsConfig => ({
+module.exports = (pathToTsConfig) => ({
   parser: '@typescript-eslint/parser',
   plugins: [
     '@typescript-eslint',
