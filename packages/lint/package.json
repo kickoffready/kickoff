@@ -1,6 +1,6 @@
 {
   "name": "@kickoffready/lint",
-  "version": "1.1.8-alpha.17",
+  "version": "1.1.8-alpha.18",
   "description": "the package that helps your setup your lint with eslint and style lint",
   "keywords": [
     "eslint",
@@ -54,6 +54,6 @@
     "stylelint-config-standard": "^22.0.0"
   },
   "dependencies": {
-    "@kickoffready/generate-config": "^1.2.4-alpha.3"
+    "@kickoffready/generate-config": "^1.2.4-alpha.4"
   }
 }
