@@ -54,6 +54,6 @@
     "stylelint-config-standard": "^22.0.0"
   },
   "dependencies": {
-    "@kickoffready/generate-config": "^1.2.4-alpha.3"
+    "@kickoffready/generate-config": "^1.2.4-alpha.4"
   }
 }
