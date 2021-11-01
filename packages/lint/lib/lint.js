@@ -2,6 +2,7 @@ const base = require('./eslint/base.set');
 const airbnbBase = require('./eslint/airbnb-base.set');
 const ts = require('./eslint/ts.config');
 const jest = require('./eslint/jest.set');
+const react = require('./eslint/react.set');
 
 const standard = require('./stylelint/standard');
 const rules = require('./stylelint/rules');
@@ -12,6 +13,7 @@ module.exports = {
     airbnbBase,
     ts,
     jest,
+    react,
   },
   stylelint: {
     standard,
