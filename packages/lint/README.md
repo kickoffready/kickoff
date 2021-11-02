@@ -2,6 +2,10 @@
 
 the common lint set for eslint & stylelint
 
+## usage
+1. [eslint config](https://github.com/kickoffready/kickoff/tree/master/packages/lint/eslint)
+2. [stylelint config](https://github.com/kickoffready/kickoff/blob/master/packages/lint/stylelint/rules.js)
+
 ## eslint
 
 ### base 
@@ -27,6 +31,13 @@ yarn add eslint@7 @kickoffready/generate-config typescript@4 @typescript-eslint/
 
 ```
 yarn add -D eslint@7 @kickoffready/generate-config eslint-config-airbnb@18 eslint-plugin-import@2 eslint-plugin-jsx-a11y@6 eslint-plugin-react@7 eslint-plugin-react-hooks@4
+```
+
+### react air-bnb ts
+
+```
+yarn add -D eslint@7 @kickoffready/generate-config eslint-config-airbnb@18 eslint-plugin-import@2 eslint-plugin-jsx-a11y@6 eslint-plugin-react@7 eslint-plugin-react-hooks@4
+typescript@4 @typescript-eslint/eslint-plugin@5 @typescript-eslint/parser@5
 ```
 
 ### jest
