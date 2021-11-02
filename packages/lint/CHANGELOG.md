@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/kickoffready/kickoff/compare/@kickoffready/lint@1.1.10...@kickoffready/lint@1.3.0) (2021-11-02)
+
+
+### Bug Fixes
+
+* export ts rules ([2d76650](https://github.com/kickoffready/kickoff/commit/2d76650b520875cb9687b8043381770ee814f03b))
+* release ([600e545](https://github.com/kickoffready/kickoff/commit/600e545300719c2be1d3e0b0b0a68c1a3ea72064))
+* release fix ([bb2b4f1](https://github.com/kickoffready/kickoff/commit/bb2b4f19ecf71517a050db96c129b1ec40acf753))
+
+
+### Features
+
+* add react config ([9b2fefd](https://github.com/kickoffready/kickoff/commit/9b2fefd6923c61b8bddb5a3e15924bdff7a096fd))
+* add ts base rules ([a759fa4](https://github.com/kickoffready/kickoff/commit/a759fa42ed099fbc6152649ed2bcada30301fade))
+* create eslint rules ([833bdb5](https://github.com/kickoffready/kickoff/commit/833bdb579fda783b0acbbec7850d1a58b8466d53))
+* init react ts ([269bffc](https://github.com/kickoffready/kickoff/commit/269bffc2f7f1609755ba4251ea851ed5c69b51ea))
+
+
+
+
+
 ## [1.1.10](https://github.com/kickoffready/kickoff/compare/@kickoffready/lint@1.1.9...@kickoffready/lint@1.1.10) (2021-10-27)
 
 **Note:** Version bump only for package @kickoffready/lint
