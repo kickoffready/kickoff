@@ -16,7 +16,23 @@ const ts = {
   },
 };
 
+const reactTs = {
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.ts', '.tsx'],
+      },
+    },
+  },
+  rules: {
+    ...ts.rules,
+    'react/jsx-filename-extension': [2, { extensions: ['.tsx'] }],
+    'import/extensions': [2, { ts: 'never', tsx: 'never' }],
+  },
+};
+
 module.exports = {
   react,
+  reactTs,
   ts,
 };
