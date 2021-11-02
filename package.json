@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "release:pre": "yarn lerna publish --conventional-prerelease --no-verify-access --conventional-commits --yes",
-    "release": "yarn lerna publish from-package --no-verify-access --conventional-commits --yes",
+    "release": "yarn lerna publish --no-verify-access --conventional-commits --yes",
     "test": "yarn lerna run test --since origin/master",
     "generate": "lerna create"
   },

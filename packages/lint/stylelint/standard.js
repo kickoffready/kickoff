@@ -1,3 +1,4 @@
-const {stylelint} = require('../lib/lint');
-const {standard} = stylelint;
-module.exports = standard
+const { stylelint } = require('../lib/lint');
+
+const { standard } = stylelint;
+module.exports = standard;
