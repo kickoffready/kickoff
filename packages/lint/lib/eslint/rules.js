@@ -18,4 +18,5 @@ const ts = {
 
 module.exports = {
   react,
+  ts,
 };
