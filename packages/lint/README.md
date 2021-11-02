@@ -1,6 +1,6 @@
 # `lint`
 
-the common lint set for eslint & stylelint
+the common lint set for eslint & stylelint 
 
 ## usage
 1. [eslint config](https://github.com/kickoffready/kickoff/tree/master/packages/lint/eslint)
