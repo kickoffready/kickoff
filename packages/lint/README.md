@@ -56,6 +56,12 @@ yarn add eslint@7 @kickoffready/generate-config eslint-plugin-jest@25 -D
 yarn add stylelint@13 stylelint-config-standard@22 -D
 ```
 
+### standard
+
+```
+yarn add stylelint@13 stylelint-config-standard@22 stylelint-config-styled-components -D
+```
+
 ### rules
 if need sass 
 

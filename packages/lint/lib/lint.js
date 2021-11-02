@@ -8,6 +8,7 @@ const reactTs = require('./eslint/react.ts.config');
 
 const standard = require('./stylelint/standard');
 const styleLintRules = require('./stylelint/rules');
+const styled = require('./stylelint/styled');
 
 module.exports = {
   eslint: {
@@ -22,5 +23,6 @@ module.exports = {
   stylelint: {
     standard,
     rules: styleLintRules,
+    styled,
   },
 };
