@@ -1,7 +1,12 @@
 import React from 'react';
 
+import styled from 'styled-components';
+
+const AppDiv = styled.div`
+  display: block;
+`;
 const App: React.FC = ({ name }: {name: string}) => (
-  <div className="App">
+  <AppDiv>
     <header className="App-header">
       <p>
         Edit
@@ -19,7 +24,7 @@ const App: React.FC = ({ name }: {name: string}) => (
         Learn React
       </a>
     </header>
-  </div>
+  </AppDiv>
 );
 
 export default App;
