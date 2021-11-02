@@ -50,6 +50,15 @@ const sass = {
   },
 };
 
+const styled = {
+  extends: [
+    'stylelint-config-property-sort-order-smacss',
+  ],
+  plugins: [
+    'stylelint-order',
+  ],
+};
+
 module.exports = {
   smacssBem,
   standard,
@@ -58,4 +67,5 @@ module.exports = {
   sass,
   flatStyling,
   designSystemCSS,
+  styled,
 };
