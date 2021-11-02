@@ -6,7 +6,8 @@
     "eslint",
     "stylelint",
     "airbnb",
-    "jest"
+    "jest",
+    "styled-components"
   ],
   "author": "sihui liang",
   "homepage": "https://github.com/kickoffready/kickoff/tree/master/packages/lint#readme",
