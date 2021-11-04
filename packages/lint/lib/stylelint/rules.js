@@ -1,9 +1,11 @@
 const flatStyling = {
-  'selector-max-id': 0,
-  'selector-max-type': 0,
-  'selector-pseudo-class-allowed-list': ['hover', 'not', 'focus', 'active'],
-  'selector-pseudo-element-allowed-list': ['before', 'after', 'placeholder'],
-  'selector-max-specificity': '0,3,0',
+  rules: {
+    'selector-max-id': 0,
+    'selector-max-type': 0,
+    'selector-pseudo-class-allowed-list': ['hover', 'not', 'focus', 'active'],
+    'selector-pseudo-element-allowed-list': ['before', 'after', 'placeholder'],
+    'selector-max-specificity': '0,3,0',
+  },
 };
 
 const smacssBem = {
