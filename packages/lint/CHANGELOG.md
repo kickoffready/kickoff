@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/kickoffready/kickoff/compare/@kickoffready/lint@1.3.0...@kickoffready/lint@1.4.0) (2021-11-02)
+
+
+### Features
+
+* add rules ([06810ba](https://github.com/kickoffready/kickoff/commit/06810ba6b89f50af384ea2af115df665450a4819))
+* release styled ([9e899ea](https://github.com/kickoffready/kickoff/commit/9e899ea534c60657fb9166f3752d73f1c55a3274))
+* styled ([2ce6506](https://github.com/kickoffready/kickoff/commit/2ce6506f20e3b7ad6fee74000bfe798dd1e2d281))
+* styled ([c0ff789](https://github.com/kickoffready/kickoff/commit/c0ff789c26a29146f3559b59d250cf1f2377ab25))
+
+
+
+
+
 # [1.3.0](https://github.com/kickoffready/kickoff/compare/@kickoffready/lint@1.1.10...@kickoffready/lint@1.3.0) (2021-11-02)
 
 
