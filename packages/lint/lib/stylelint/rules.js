@@ -42,6 +42,7 @@ const standard = {
   rules: {
     'declaration-block-no-duplicate-properties': true,
   },
+  plugins: ['stylelint-order'],
 };
 
 const sass = {
@@ -57,9 +58,6 @@ const styled = {
   extends: [
     'stylelint-config-styled-components',
     'stylelint-config-property-sort-order-smacss',
-  ],
-  plugins: [
-    ['stylelint-order'],
   ],
 };
 
