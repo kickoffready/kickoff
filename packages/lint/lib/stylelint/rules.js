@@ -36,13 +36,14 @@ const autoFix = {
 };
 
 const standard = {
+  extends: ['stylelint-config-standard'],
   rules: {
     'declaration-block-no-duplicate-properties': true,
   },
 };
 
 const sass = {
-  extends: 'stylelint-config-sass-guidelines',
+  extends: ['stylelint-config-sass-guidelines'],
   rules: {
     'at-rule-disallowed-list': ['extend'],
     'max-nesting-depth': 4,
@@ -52,10 +53,11 @@ const sass = {
 
 const styled = {
   extends: [
+    'stylelint-config-styled-components',
     'stylelint-config-property-sort-order-smacss',
   ],
   plugins: [
-    'stylelint-order',
+    ['stylelint-order'],
   ],
 };
 
