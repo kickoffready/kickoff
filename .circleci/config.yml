@@ -22,8 +22,7 @@ jobs:
             - run: 
                 name: add github info
                 command: |
-                  git config user.email hi@sihuiliang.com
-                  git config user.name seeliang
+                  bash bash/git-config.sh
             - run: 
                 name: add registry info
                 command: bash bash/npm-set.sh
