@@ -27,8 +27,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: | 
-      bash bash/git-config.sh
-      git commit --allow-empty -m "push test"
-      git push
+        bash bash/git-config.sh
+        git commit --allow-empty -m "push test"
+        git push
 
 
