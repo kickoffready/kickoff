@@ -20,15 +20,22 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: | 
+    - name: git config
+      run: | 
         bash bash/git-config.sh
+    - name: git checkout 
+        git remote set-branches origin '*'
+        git fetch
+        git branch -a
         git checkout ${GITHUB_HEAD_REF}
+    - name: git try push
         git commit --allow-empty -m "push test"
         git push
 
