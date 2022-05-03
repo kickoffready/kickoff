@@ -28,6 +28,7 @@ jobs:
         cache: 'npm'
     - run: | 
         bash bash/git-config.sh
+        git checkout ${GITHUB_HEAD_REF}
         git commit --allow-empty -m "push test"
         git push
 
