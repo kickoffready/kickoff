@@ -32,13 +32,10 @@ jobs:
         bash bash/git-config.sh
     - name: git checkout 
       run: |
-        git remote set-branches origin '*'
-        git fetch
-        git branch -a
-        git checkout ${GITHUB_HEAD_REF}
-    - name: git try push
-      run: |
-        git commit --allow-empty -m "push test"
-        git push
+        bash bash/gh-action-checkout.sh
+    # - name: git push permission test 
+    #   run: |
+    #     git commit --allow-empty -m "push test"
+    #     git push
 
 
